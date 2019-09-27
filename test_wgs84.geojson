@@ -1,0 +1,34 @@
+{
+  "type": "FeatureCollection",
+  "name": "test",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "id": 46557473,
+        "name": "Mannerheimintie",
+        "functionalClass": "Katu",
+        "speedLimit": "40",
+        "pavementClass": "1",
+        "sideCode": 1
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [25.01977443695268, 60.291363826078097, -0.000079012475908],
+          [25.015997886665993, 60.291969969746482, -0.000079014338553],
+          [25.012822151189109, 60.29209757752961, -0.000079014338553],
+          [25.008208751673941, 60.292097577509558, -0.000079014338553],
+          [25.005226135257629, 60.292076309631263, -0.00007901340723]
+        ],
+        "crs": { "type": "name", "properties": { "name": "EPSG:3067" } }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "type": "obstacle", "id": 46557473, "class": 1 },
+      "geometry": null
+    }
+  ]
+}
