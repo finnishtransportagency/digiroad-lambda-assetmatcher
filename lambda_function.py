@@ -21,8 +21,6 @@ def lambda_handler(event, context):
 
         matchingScript = open("matching_script.sql", "r").read()
         cursor.execute(matchingScript, (datasetId,))
-
-        connection.commit()
     except (Exception, psycopg2.Error) as error:
         print ("Error while connecting to PostgreSQL", error)
     finally:
