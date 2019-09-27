@@ -51,7 +51,7 @@ update temp_points set edges =
 (SELECT string_agg(edge,',') from
 (SELECT distinct edge::text FROM pgr_withPoints(
   'SELECT link_id as id, source, target, cost, cost as reverse_cost FROM public.dr_linkki ORDER BY id',
-  'SELECT id as pid, dr_link_id edge_id, fraction, side from public.test_points where dr_link_id IS NOT Null',
+  'SELECT id as pid, dr_link_id edge_id, fraction, side from public.temp_points where dr_link_id IS NOT Null',
   (select source from first_point),(select target from last_point),
  details := true) where edge != -1) foo);
  
