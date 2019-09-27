@@ -1,6 +1,5 @@
 import json
 import psycopg2
-import base64
 import uuid
 
 def lambda_handler(event, context):
@@ -14,9 +13,11 @@ def lambda_handler(event, context):
         cursor = connection.cursor()
         data = event['body']
         datasetId = str(uuid.uuid4())
-        insert_query = "INSERT INTO datasets (dataset_id, json_data) VALUES (%s, %s)"
+        insert_query = "INSERT INTO datasets(dataset_id, json_data, upload_executed) VALUES(%s, %s, CURRENT_TIMESTAMP);"
         insert_data = (datasetId, data)
         cursor.execute(insert_query, insert_data)
+
+
         script = open("matching_script.sql", "r").read()
         cursor.execute(script)
         fetch_query = "SELECT edges FROM temp_points limit 1;"
