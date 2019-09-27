@@ -11,20 +11,18 @@ def lambda_handler(event, context):
                                       database = os.environ['RDS_DATABASE'])
         connection.set_isolation_level(0)
         cursor = connection.cursor()
+
         data = event['body']
         datasetId = str(uuid.uuid4())
-        insert_query = "INSERT INTO datasets(dataset_id, json_data, upload_executed) VALUES(%s, %s, CURRENT_TIMESTAMP);"
-        insert_data = (datasetId, data)
-        cursor.execute(insert_query, insert_data)
 
+        insertDataset = "INSERT INTO datasets(dataset_id, json_data, upload_executed) VALUES(%s, %s, CURRENT_TIMESTAMP);"
+        insertVariables = (datasetId, data)
+        cursor.execute(insertDataset, insertVariables)
 
-        script = open("matching_script.sql", "r").read()
-        cursor.execute(script)
-        fetch_query = "SELECT edges FROM temp_points limit 1;"
-        cursor.execute(fetch_query)
-        result = cursor.fetchall()
-        truncate_query = "truncate temp_points;"
-        cursor.execute(truncate_query)
+        matchingScript = open("matching_script.sql", "r").read()
+        cursor.execute(matchingScript, (datasetId,))
+
+        connection.commit()
     except (Exception, psycopg2.Error) as error:
         print ("Error while connecting to PostgreSQL", error)
     finally:
