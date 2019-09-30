@@ -50,11 +50,12 @@ alter table public.dr_linkki alter column geom type geometry(LineString,3067) us
 SELECT  pgr_createTopology('public.dr_linkki', 0.5,'geom', 'link_id', 'source', 'target');
 ```
 
-### Create table for storing input data and matching results
+### Create tables for matching script
 
 ```sql
 -- Creating table for json-data reccived from municipality api
-CREATE TABLE datasets (
+-- and storing matching process and result
+CREATE TABLE public.datasets (
 	dataset_id uuid PRIMARY KEY,
 	json_data jsonb NOT NULL,
 	matched_roadlinks bigint[],
@@ -63,4 +64,17 @@ CREATE TABLE datasets (
 	update_finished timestamptz,
 	status_log text
 )
+
+-- Temporary table for feature manipulation in matching script.
+CREATE TABLE temp_points (
+    id serial,
+    dr_link_id integer,
+    fraction float,
+    dr_vertex_id integer,
+    geom geometry(Point,3067),
+    side char(1) default 'b',
+    edges text,
+    source int,
+    target int
+);
 ```

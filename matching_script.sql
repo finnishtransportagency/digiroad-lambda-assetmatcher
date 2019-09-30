@@ -1,21 +1,36 @@
-drop table if exists temp_points;
+TRUNCATE TABLE temp_points RESTART IDENTITY CASCADE;
 
-create table temp_points (id serial, dr_link_id integer, fraction float, dr_vertex_id integer, geom geometry(PointZ,3067));
+-- Retrieves GeoJSON data and converts lines it contains to points
+-- This query reads only the first geometry. this needs improvement in the future
+WITH make_points AS ( 
+  SELECT 
+	json_data->'features'->0->'geometry' AS geom_json
+  FROM datasets 
+),
 
-insert into temp_points (geom) select (dp).geom from (SELECT ST_DumpPoints(ST_GeomFromGeoJSON((select json_data->'features'->0->'geometry' from datasets))) as dp) foo;
+transform_points AS (
+  SELECT
+  ST_DumpPoints(
+	  ST_Force2D(
+	    ST_GeomFromGeoJSON(geom_json)
+	  )
+  ) AS dump_geom 
+  FROM make_points
+) 
 
-alter table temp_points alter column geom type geometry(Point,3067) using ST_Force2D(geom);
+INSERT INTO temp_points (geom) (
+  SELECT 
+    (dump_geom).geom AS geom 
+  FROM transform_points
+);
 
-create index temp_points_spix on temp_points using gist(geom);
+CREATE INDEX temp_points_spix ON temp_points USING GIST(geom);
 
-alter table temp_points add column side char(1) default 'b';
-
-alter table temp_points add column edges text;
-
-alter table temp_points add column source int;
-alter table temp_points add column target int;
-
-
+-- this query expects that dr_linkki column data type is integer.
+-- By default it is VARCHAR(20) it can be altered with this query:
+-- ALTER TABLE dr_linkki
+-- 	ALTER COLUMN link_id TYPE int
+-- 	USING link_id::int;
 update temp_points point set dr_link_id =
 (select v.link_id
 from dr_linkki v, temp_points p
@@ -51,7 +66,7 @@ update temp_points set edges =
 (SELECT string_agg(edge,',') from
 (SELECT distinct edge::text FROM pgr_withPoints(
   'SELECT link_id as id, source, target, cost, cost as reverse_cost FROM public.dr_linkki ORDER BY id',
-  'SELECT id as pid, dr_link_id edge_id, fraction, side from public.test_points where dr_link_id IS NOT Null',
+  'SELECT id as pid, dr_link_id edge_id, fraction, side from public.temp_points where dr_link_id IS NOT Null',
   (select source from first_point),(select target from last_point),
  details := true) where edge != -1) foo);
  
