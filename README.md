@@ -30,6 +30,8 @@ shp2pgsql -d -s 3067 -S UUSIMAA/UUSIMAA_2/DR_LINKKI.shp dr_linkki |psql -d dr_r
 
 (You can append more data with -a flag)
 
+### Necessary modifications to table before matching script can be run
+
 ```sql
 -- Preparing to create the network topology for routing:
 alter table public.dr_linkki drop column if exists source;
@@ -46,4 +48,19 @@ alter table public.dr_linkki alter column geom type geometry(LineString,3067) us
 
 -- Creating the topology for pgrouting extension
 SELECT  pgr_createTopology('public.dr_linkki', 0.5,'geom', 'link_id', 'source', 'target');
+```
+
+### Create table for storing input data and matching results
+
+```sql
+-- Creating table for json-data reccived from municipality api
+CREATE TABLE datasets (
+	dataset_id uuid PRIMARY KEY,
+	json_data jsonb NOT NULL,
+	matched_roadlinks bigint[],
+	matching_rate decimal(3,2),
+	upload_executed timestamptz,
+	update_finished timestamptz,
+	status_log text
+)
 ```
