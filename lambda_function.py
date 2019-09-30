@@ -15,7 +15,7 @@ def lambda_handler(event, context):
         data = event['body']
         datasetId = str(uuid.uuid4())
 
-        insertDataset = "INSERT INTO datasets(dataset_id, json_data, upload_executed) VALUES(%s, %s, CURRENT_TIMESTAMP);"
+        insertDataset = "INSERT INTO datasets(dataset_id, json_data) VALUES(%s, %s);"
         insertVariables = (datasetId, data)
         cursor.execute(insertDataset, insertVariables)
 
