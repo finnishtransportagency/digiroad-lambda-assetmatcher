@@ -40,6 +40,12 @@ alter table public.dr_linkki add column source integer;
 alter table public.dr_linkki add column target integer;
 alter table public.dr_linkki alter column link_id type integer using link_id::integer;
 
+
+-- Adding a column for routing cost for pgr_withPoints()-function in matching prosess
+alter table public.dr_linkki drop column if exists cost;
+alter table public.dr_linkki add column cost float;
+update public.dr_linkki set cost = ST_Length(geom);
+
 -- Create spatial index with PostGIS to enhanche matching (Crucial for perfomance)
 create index dr_linkki_spix on dr_linkki using gist(geom);
 
@@ -47,7 +53,7 @@ create index dr_linkki_spix on dr_linkki using gist(geom);
 alter table public.dr_linkki alter column geom type geometry(LineString,3067) using ST_Force2D(geom);
 
 -- Creating the topology for pgrouting extension
-SELECT  pgr_createTopology('public.dr_linkki', 0.5,'geom', 'link_id', 'source', 'target');
+SELECT pgr_createTopology('public.dr_linkki', 0.5,'geom', 'link_id', 'source', 'target');
 ```
 
 ### Create tables for matching script
