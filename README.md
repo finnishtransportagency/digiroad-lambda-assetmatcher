@@ -47,7 +47,7 @@ alter table public.dr_linkki add column cost float;
 update public.dr_linkki set cost = ST_Length(geom);
 
 -- Create spatial index with PostGIS to enhanche matching (Crucial for perfomance)
-create index dr_linkki_spix on dr_linkki using gist(geom);
+create index dr_linkki_spix on public.dr_linkki using gist(geom);
 
 -- Convert the geometry to 2D
 alter table public.dr_linkki alter column geom type geometry(LineString,3067) using ST_Force2D(geom);
@@ -72,7 +72,7 @@ CREATE TABLE public.datasets (
 )
 
 -- Temporary table for feature manipulation in matching script.
-CREATE TABLE temp_points (
+CREATE TABLE public.temp_points (
     id serial,
     dr_link_id integer,
     fraction float,
