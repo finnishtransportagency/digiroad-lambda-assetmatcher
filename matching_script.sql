@@ -1,13 +1,22 @@
+-- The matching process.
+-- 1. Fetch stored data from dataset table.
+-- 2. Transform fetched JSON to PostGIS points and store it to temp_points table.
+-- 3. Buffering new temp_points and getting a link_id from nearest dr_linkki
+-- 4. Selecting nearest vertexes from pgRouting topology
+-- 5. Slecting the the A and B for routing
+-- 6. Using the topology to get all edges in the route between features A and B
+
 TRUNCATE TABLE temp_points RESTART IDENTITY CASCADE;
 
--- Retrieves GeoJSON data and converts lines it contains to points
--- This query reads only the first geometry. this needs improvement in the future
-WITH make_points AS ( 
+-- 1. Datafetch
+-- Retrieves GeoJSON data and converts lines it contains to points.
+-- This query reads only the first geometry. this needs improvement in the future.
+WITH make_points AS (
   SELECT 
 	json_data->'features'->0->'geometry' AS geom_json
   FROM datasets 
 ),
-
+-- 2. Transform lines to points and store it for further prosessing.
 transform_points AS (
   SELECT
   ST_DumpPoints(
@@ -24,52 +33,123 @@ INSERT INTO temp_points (geom) (
   FROM transform_points
 );
 
+-- This might enhance performance but more important is that dr_linkki has spatial index.
 CREATE INDEX temp_points_spix ON temp_points USING GIST(geom);
 
--- this query expects that dr_linkki column data type is integer.
--- By default it is VARCHAR(20) it can be altered with this query:
--- ALTER TABLE dr_linkki
--- 	ALTER COLUMN link_id TYPE int
--- 	USING link_id::int;
-update temp_points point set dr_link_id =
-(select v.link_id
-from dr_linkki v, temp_points p
-where p.id = point.id and ST_Buffer(point.geom,50) && v.geom
-order by p.geom <-> v.geom asc limit 1);
 
-update temp_points point set fraction =
-(select ST_LineLocatePoint(v.geom,point.geom)
-from dr_linkki v
-where point.dr_link_id = v.link_id);
+-- 3. Buffering new temp_points and getting a link_id from nearest dr_linkki
 
-update temp_points point set dr_vertex_id =
-(select v.id
-from dr_linkki_vertices_pgr v, temp_points p
-where p.id = point.id and ST_Buffer(p.geom, 50) && v.the_geom
-order by p.geom <-> v.the_geom asc limit 1);
 
-update temp_points p set source =
-(select case
-  when p.dr_vertex_id is not null then p.dr_vertex_id
-  else -1*p.id
-end as source);
+-- The && operator returns TRUE if the 2D bounding box of geometry 
+-- A intersects the 2D bounding box of geometry B.
 
-update temp_points p set target =
-(select case
-  when p.dr_vertex_id is not null then p.dr_vertex_id
-  else -1*p.id
-end as target);
+-- <-> — Returns the 2D distance between A and B.
 
-with first_point as (select * from temp_points order by id limit 1),
-last_point as (select * from temp_points order by id desc limit 1)
-update temp_points set edges =
-(SELECT string_agg(edge,',') from
-(SELECT distinct edge::text FROM pgr_withPoints(
-  'SELECT link_id as id, source, target, cost, cost as reverse_cost FROM public.dr_linkki ORDER BY id',
-  'SELECT id as pid, dr_link_id edge_id, fraction, side from public.temp_points where dr_link_id IS NOT Null',
-  (select source from first_point),(select target from last_point),
- details := true) where edge != -1) foo);
- 
-truncate datasets;
+UPDATE temp_points
+SET dr_link_id =(
+	SELECT dr_linkki.link_id
+	FROM dr_linkki
+	WHERE ST_Buffer(temp_points.geom,50) && dr_linkki.geom
+	ORDER BY temp_points.geom <-> dr_linkki.geom ASC
+	LIMIT 1
+);
 
-drop index temp_points_spix;
+UPDATE temp_points
+SET fraction = (
+	SELECT ST_LineLocatePoint(dr_linkki.geom,temp_points.geom)
+	FROM dr_linkki
+	WHERE temp_points.dr_link_id = dr_linkki.link_id
+);
+
+-- 4. Selecting nearest vertexes from pgRouting topology
+
+-- this is same procedure as in part 3 but instead of dr_linkki ids here
+-- temp_points are connected to nearest vertex which were made by 
+-- pgr_createTopology-function in pgRouting
+UPDATE temp_points 
+SET dr_vertex_id = (
+	SELECT lnk_vrx.id
+	FROM dr_linkki_vertices_pgr lnk_vrx
+	WHERE ST_Buffer(temp_points.geom, 50) && lnk_vrx.the_geom -- 50m might be overkill?
+	ORDER BY temp_points.geom <-> lnk_vrx.the_geom ASC
+	LIMIT 1
+);
+
+-- 5. Slecting the the A and B for routing
+-- this prosess depends on tables id column which has to be serial
+
+-- pgr_withPoints()-function doesn't understand NULL-values thats why
+-- temp_points tabel's id is used in case when vertex is missing.
+UPDATE temp_points 
+SET source = (
+	SELECT 
+	CASE
+  		WHEN temp_points.dr_vertex_id IS NOT NULL THEN temp_points.dr_vertex_id
+  		ELSE -1 * temp_points.id
+	END
+);
+
+UPDATE temp_points
+SET target = (
+	SELECT 
+	CASE
+  		WHEN temp_points.dr_vertex_id IS NOT NULL 
+			THEN temp_points.dr_vertex_id
+  		ELSE -1 * temp_points.id
+	END
+);
+
+
+-- pgRouting uses first & last points for routing from A to B
+-- but the route can also contain more points alongside the route
+
+WITH first_point AS (
+	SELECT * 
+	FROM temp_points 
+	ORDER BY id ASC 
+	LIMIT 1
+),
+last_point AS (
+	SELECT * 
+	FROM temp_points 
+	ORDER BY id DESC 
+	LIMIT 1
+)
+
+-- 6. Using the topology to get all edges in the route between features A and B
+-- pgr_withPoints(edges_sql, points_sql, from_vid,  to_vid  [, directed] [, driving_side] [, details])
+
+UPDATE temp_points 
+SET edges = (
+	SELECT string_agg(edge,',') 
+	FROM (
+		SELECT DISTINCT edge::text 
+		FROM pgr_withPoints(
+  		'SELECT 
+				link_id AS id, 
+				source, 
+				target, 
+				cost, 
+				cost AS reverse_cost 
+			FROM public.dr_linkki 
+			ORDER BY id',
+			
+  		'SELECT 
+				id AS pid, 
+				dr_link_id AS edge_id, 
+				fraction, 
+				side 
+			FROM public.temp_points 
+			WHERE dr_link_id IS NOT NULL',
+			
+  		(SELECT source FROM first_point),
+			(SELECT target FROM last_point),
+ 			details := true) 
+	WHERE edge != -1) 
+	RETURN 
+);
+
+
+TRUNCATE datasets;
+
+DROP INDEX temp_points_spix;
