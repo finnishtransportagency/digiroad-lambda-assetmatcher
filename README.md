@@ -20,7 +20,10 @@ create extension postGIS;
 create extension pgRouting;
 ```
 
-Import roadlink shapefiles for Vantaa from digiroad r-extract:
+### Import roadlink shapefiles for Vantaa from digiroad r-extract:
+
+PostGIS install comes with tools shp2pgsql and pgsql2shp which are prefered way
+to work between shapefiles and PostGIS.
 
 ```bash
 wget http://aineistot.vayla.fi/digiroad/2019_02/Maakuntajako_DIGIROAD_R_EUREF-FIN/UUSIMAA.zip
@@ -29,6 +32,17 @@ shp2pgsql -d -s 3067 -S UUSIMAA/UUSIMAA_2/DR_LINKKI.shp dr_linkki |psql -d dr_r
 ```
 
 (You can append more data with -a flag)
+
+### Import whole Finland from GeoPackage with GDAL translation library.
+
+more info on https://gdal.org/index.html
+Warnig file download is estimated to be 1.6 GT zipped and 5 Gt as unfipped GeoPackage.
+
+```bash
+wget https://aineistot.vayla.fi/digiroad/latest/KokoSuomi_DIGIROAD_R_GeoPackage.zip
+unzip KokoSuomi_DIGIROAD_R_GeoPackage.zip
+ogr2ogr -f "PostgreSQL" PG:"dbname=dr_r" KokoSuomi_Digiroad_R_GeoPackage.gpkg DR_LINKKI
+```
 
 ### Necessary modifications to table before matching script can be run
 
