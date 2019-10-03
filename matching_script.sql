@@ -70,7 +70,7 @@ UPDATE temp_points
 SET dr_vertex_id = (
 	SELECT lnk_vrx.id
 	FROM dr_linkki_vertices_pgr lnk_vrx
-	WHERE ST_Buffer(temp_points.geom, 50) && lnk_vrx.the_geom -- 50m might be overkill?
+	WHERE ST_Buffer(temp_points.geom, 5) && lnk_vrx.the_geom -- 50m might be overkill?
 	ORDER BY temp_points.geom <-> lnk_vrx.the_geom ASC
 	LIMIT 1
 );
@@ -150,6 +150,6 @@ SET edges = (
 );
 
 
-TRUNCATE datasets;
+-- TRUNCATE datasets;
 
 DROP INDEX temp_points_spix;
