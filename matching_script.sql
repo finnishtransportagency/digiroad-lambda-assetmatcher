@@ -6,7 +6,8 @@
 -- 5. Slecting the the A and B for routing
 -- 6. Using the topology to get all edges in the route between features A and B
 
-
+-- Running the script from terminal
+-- psql -d dr_r -f matching_script.sql
 
 DO
 $BODY$
