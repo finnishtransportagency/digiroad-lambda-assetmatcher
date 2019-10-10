@@ -1,6 +1,7 @@
 import json
 import psycopg2
 import uuid
+import os
 
 def lambda_handler(event, context):
     try:
@@ -9,26 +10,33 @@ def lambda_handler(event, context):
                                       host = os.environ['RDS_HOST'],
                                       port = os.environ['RDS_PORT'],
                                       database = os.environ['RDS_DATABASE'])
-        connection.set_isolation_level(0)
         cursor = connection.cursor()
+        print("PostgreSQL connection established")
 
         data = event['body']
         datasetId = str(uuid.uuid4())
 
-        insertDataset = "INSERT INTO datasets(dataset_id, json_data) VALUES(%s, %s);"
+        insert_query="INSERT INTO datasets(dataset_id, json_data, upload_executed) VALUES(%s, %s, CURRENT_TIMESTAMP);"
         insertVariables = (datasetId, data)
-        cursor.execute(insertDataset, insertVariables)
+        cursor.execute(insert_query, insertVariables)
+        print("Inserted dataset into PostgreSQL")
 
         matchingScript = open("matching_script.sql", "r").read()
         cursor.execute(matchingScript, (datasetId,))
+        print("Matching script executed")
+
+        connection.commit()
     except (Exception, psycopg2.Error) as error:
-        print ("Error while connecting to PostgreSQL", error)
+        print("Error while connecting to PostgreSQL", error)
+        return {
+            'statusCode': 400,
+            'body': json.dumps("Malformed geojson. Check geojson.")
+        }
     finally:
-        # closing database connection.
-        if (connection):
+        if connection:
             cursor.close()
             connection.close()
-            print("PostgreSQL connection is closed")
+            print("PostgreSQL connection closed")
 
     return {
         'statusCode': 200,
