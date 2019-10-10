@@ -1,9 +1,7 @@
 import json
 import psycopg2
+import os
 
-# Filename changed because github pulls will override the "original" file
-# (Both files are "lambda_function" but for two different methods (/convert, /update))
-# Important to change the filename to "lamba_function.py" after you send it to aws and delete the one you do not need it
 def lambda_handler(event, context):
     try:
         connection = psycopg2.connect(user = os.environ['RDS_USER'],
@@ -11,22 +9,44 @@ def lambda_handler(event, context):
                                       host = os.environ['RDS_HOST'],
                                       port = os.environ['RDS_PORT'],
                                       database = os.environ['RDS_DATABASE'])
-        connection.set_isolation_level(0)
         cursor = connection.cursor()
-        data = eval(event['body'])
+        print("PostgreSQL connection established")
 
+        data = set(eval(event['body']))
+        nonexistentDatasets = []
+        alreadyUploadedDatasets = []
         selectedDatasets = []
+
         for datasetId in data:
-            getDataset = "SELECT dataset_id, json_data, matched_roadlinks FROM datasets WHERE dataset_id = %s;"
+            print("Checking if dataset with datasetId " + datasetId + " exists")
+            getDataset = "SELECT dataset_id FROM datasets WHERE dataset_id = %s;"
             cursor.execute(getDataset, (datasetId,))
             result = cursor.fetchall()
-            if result:
-                selectedDatasets.append(result)
 
-    except (Exception, psycopg2.Error) as error :
-        print ("Error while connecting to PostgreSQL", error)
+            if result:
+                print("Checking if dataset with datasetId " + datasetId + " was already updated")
+                getDataset = "SELECT dataset_id, json_data, matched_roadlinks FROM datasets WHERE dataset_id = %s AND update_finished IS NULL;"
+                cursor.execute(getDataset, (datasetId,))
+                result = cursor.fetchall()
+
+                if result:
+                    selectedDatasets.append(result)
+                    print("Dataset with datasetId " + datasetId + " ready to be send!")
+                else:
+                    alreadyUploadedDatasets.append(datasetId)
+            else:
+                nonexistentDatasets.append(datasetId)
+
+        print('Selected: ' + str(selectedDatasets))
+        print('Nonexistent: ' + str(nonexistentDatasets))
+        print('Already updated: ' + str(alreadyUploadedDatasets))
+    except (Exception, psycopg2.Error) as error:
+        print("Error while connecting to PostgreSQL", error)
+        return {
+            'statusCode': 400,
+            'body': json.dumps("Malformed json. Acceptable json format: [<DatasetId>,<DatasetId>,...]")
+        }
     finally:
-        #closing database connection.
         if(connection):
             cursor.close()
             connection.close()
@@ -34,5 +54,5 @@ def lambda_handler(event, context):
 
     return {
         'statusCode': 200,
-        'body': json.dumps(selectedDatasets)    # Returning selectedDatasets for testing only
+        'body': json.dumps(selectedDatasets)
     }
