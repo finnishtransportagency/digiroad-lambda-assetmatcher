@@ -8,7 +8,8 @@ def lambda_handler(event, context):
                                       password = os.environ['RDS_PASSWORD'],
                                       host = os.environ['RDS_HOST'],
                                       port = os.environ['RDS_PORT'],
-                                      database = os.environ['RDS_DATABASE'])
+                                      database = os.environ['RDS_DATABASE'],
+                                      options=f"-c search_path={os.environ['RDS_SCHEMA']}")
         cursor = connection.cursor()
         print("PostgreSQL connection established")
 
