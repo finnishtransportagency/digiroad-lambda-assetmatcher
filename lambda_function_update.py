@@ -1,6 +1,7 @@
 import json
 import psycopg2
 import os
+import requests
 
 def lambda_handler(event, context):
     try:
@@ -37,6 +38,8 @@ def lambda_handler(event, context):
             else:
                 nonexistentDatasets.append(datasetId)
 
+        userMessage = sendDataSetsToOTH(selectedDatasets, cursor)
+
         print('Selected: ' + str(selectedDatasets))
         print('Nonexistent: ' + str(nonexistentDatasets))
         print('Already updated: ' + str(alreadyUploadedDatasets))
@@ -54,5 +57,34 @@ def lambda_handler(event, context):
 
     return {
         'statusCode': 200,
-        'body': json.dumps(selectedDatasets)
+        'body': json.dumps(userMessage)
     }
+
+
+
+def sendDataSetsToOTH(selectedDatasets, dataBaseCursor):
+    base_url = os.environ['OTH_MUNICIPALITY_API_URL']
+    headers = {'Authorization': os.environ['OTH_MUNICIPALITY_API_AUTH'], 'Content-Type': 'application/json'}
+
+    try:
+        response = requests.put(base_url, json=selectedDatasets, headers=headers)
+        if response.status_code != 200:
+            print(response.text)
+            raise Exception('Recieved non 200 response while sending DataSets to OTH Municipality API.')
+        else:
+            storeOTHResponse(response, dataBaseCursor)
+    except requests.exceptions.RequestException as re:
+        print(re)
+
+
+def storeOTHResponse(othResponse, dataBaseCursor):
+    updateQuery = """ UPDATE datasets SET error_log = %s WHERE dataset_id = %s"""
+
+    jsonResponse = json.loads(othResponse.text)
+    try:
+        for dataSetId in jsonResponse:
+            dataBaseCursor.execute(updateQuery, (jsonResponse[dataSetId], dataSetId))
+    except (Exception, psycopg2.DatabaseError) as error:
+        print(error)
+
+    return othResponse
