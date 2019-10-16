@@ -14,7 +14,7 @@ $BODY$
 DECLARE
   -- 1. Datafetch
   -- Fetches GeoJSON data and stores it for variable. 
-  geojson_data jsonb := (SELECT json_data->'features' FROM datasets);
+  geojson_data jsonb := (SELECT json_data->'features' FROM datasets WHERE dataset_id = %s);
   feature jsonb;
 	point_coordinates jsonb;
 	point_temp_store geometry;
