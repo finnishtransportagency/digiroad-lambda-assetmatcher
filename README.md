@@ -78,7 +78,7 @@ SELECT pgr_createTopology('public.dr_linkki', 0.5,'geom', 'link_id', 'source', '
 CREATE TABLE public.datasets (
 	dataset_id uuid PRIMARY KEY,
 	json_data jsonb NOT NULL,
-	matched_roadlinks bigint[][],
+	matched_roadlinks text,
 	matching_rate decimal(3,2),
 	upload_executed timestamptz,
 	update_finished timestamptz,
