@@ -5,16 +5,22 @@
 -- 4. Selecting nearest vertexes from pgRouting topology
 -- 5. Slecting the the A and B for routing
 -- 6. Using the topology to get all edges in the route between features A and B
+-- 7. Storing the final result on datasets table
 
 -- Running the script from terminal
 -- psql -d dr_r -f matching_script.sql
+-- running this in terminal requires changes for 'WHERE dataset_id = %s' on line 22
 
 DO
 $BODY$
 DECLARE
   -- 1. Datafetch
   -- Fetches GeoJSON data and stores it for variable. 
-  geojson_data jsonb := (SELECT json_data->'features' FROM datasets WHERE dataset_id = %s);
+  geojson_data jsonb := (
+    SELECT json_data->'features' 
+    FROM datasets 
+    WHERE dataset_id = %s
+  );
   feature jsonb;
 	point_coordinates jsonb;
 	point_temp_store geometry;
@@ -162,6 +168,23 @@ BEGIN
         RETURN 
       );
 
+      -- 7. Datastoring with manuall text array
+
+      -- PostgeSQL was not fuctioning as we hoped for storing multidimentional arrays.
+      -- Cause of the problems were empty arrays and arrays with only single value.
+      -- We decided to do this with text/string and parcing it elsewhere.
+
+      WITH edges AS (
+	      SELECT 
+		      CONCAT('[', edges, ']') AS link_ids 
+	      FROM temp_points 
+	      LIMIT 1
+      )
+
+      UPDATE datasets 
+      SET matched_roadlinks = concat_ws(
+	        ',',matched_roadlinks,(SELECT link_ids FROM edges)
+      ); 
 
       -- TRUNCATE datasets;
 
