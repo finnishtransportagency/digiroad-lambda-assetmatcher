@@ -39,11 +39,14 @@ def lambda_handler(event, context):
                     if withGeojson == 'yes':
                         resultInfo["GeoJson"] = result[0]
                     else:
-                        resultInfo["Matched roadlinks"] = result[0]
+                        resultInfo["Matched roadlinks"] = eval(str(result[0]))
                         resultInfo["Matched rate"] = result[1]
                         resultInfo["Upload executed"] = result[2]
                         resultInfo["Update finished"] = result[3]
-                        resultInfo["Error log"] = result[4]
+                        try:
+                            resultInfo["Error log"] = eval(str(result[4]))
+                        except:
+                            resultInfo["Error log"] = str(result[4])
 
                     print("Information about dataset with datasetId " + datasetId + " fetched")
                     datasetsInfo.append(resultInfo)
