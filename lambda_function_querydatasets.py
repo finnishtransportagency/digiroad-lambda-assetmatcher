@@ -18,7 +18,7 @@ def lambda_handler(event, context):
         if 'withgeojson' in event['multiValueQueryStringParameters']:
             withGeojson = event['multiValueQueryStringParameters']['withgeojson'][0]
 
-        datasetsInfo = {}
+        datasetsInfo = []
         nonexistentDatasets = []
 
         for datasetId in datasetIds:
@@ -32,13 +32,26 @@ def lambda_handler(event, context):
             result = cursor.fetchall()
 
             if result:
+                result = result[0]
+                resultInfo = {}
+                if withGeojson == 'yes':
+                    resultInfo["GeoJson"] = result[0]
+                else:
+                    resultInfo["Matched roadlinks"] = result[0]
+                    resultInfo["Matched rate"] = result[1]
+                    resultInfo["Upload executed"] = result[2]
+                    resultInfo["Update finished"] = result[3]
+                    resultInfo["Error log"] = result[4]
+
                 print("Information about dataset with datasetId " + datasetId + " fetched")
-                datasetsInfo[datasetId] = result
+                DatasetIdResultDict = {"DatasetId": {datasetId: resultInfo}}
+                datasetsInfo.append(DatasetIdResultDict)
             else:
                 nonexistentDatasets.append(datasetId)
 
+        print(datasetsInfo)
         if nonexistentDatasets:
-            datasetsInfo['Nonexistent datasetsIds'] = nonexistentDatasets
+            datasetsInfo.append({'Nonexistent datasetsIds': nonexistentDatasets})
 
         print('datasetsInfo: ' + str(datasetsInfo))
         print('nonexistentDatasets: ' + str(nonexistentDatasets))
