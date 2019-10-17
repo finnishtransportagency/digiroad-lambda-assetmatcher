@@ -5,16 +5,16 @@ import requests
 
 def lambda_handler(event, context):
     try:
-        connection = psycopg2.connect(user=os.environ['RDS_USER'],
-                                      password=os.environ['RDS_PASSWORD'],
-                                      host=os.environ['RDS_HOST'],
-                                      port=os.environ['RDS_PORT'],
-                                      database=os.environ['RDS_DATABASE'],
-                                      options=f"-c search_path={os.environ['RDS_SCHEMA']}")
+        connection = psycopg2.connect(user = os.environ['RDS_USER'],
+                                      password = os.environ['RDS_PASSWORD'],
+                                      host = os.environ['RDS_HOST'],
+                                      port = os.environ['RDS_PORT'],
+                                      database = os.environ['RDS_DATABASE'],
+                                      options = f"-c search_path={os.environ['RDS_SCHEMA']}")
         cursor = connection.cursor()
         print("PostgreSQL connection established")
 
-        data = set(eval(event['body']))
+        data = set(eval(event['body'])['DatasetIds'])
         nonexistentDatasets = []
         alreadyUploadedDatasets = []
         selectedDatasets = []
@@ -104,10 +104,14 @@ def storeOTHResponse(othResponse, dataBaseCursor):
     print('Storing response from OTH')
     datasetsStatus = othResponse.json()
 
-    for datasetId in datasetsStatus:
-        print("Updating status of " + datasetId)
+    for dataset in datasetsStatus:
+        print("Updating status of " + dataset.get("DataSetId"))
         updateDatasetStatus = "UPDATE datasets SET update_finished = CURRENT_TIMESTAMP, error_log = %s WHERE dataset_id = %s;"
-        updateVariables = (datasetsStatus[datasetId], datasetId)
+        status = dataset.get("Status")
+        if status == "Processed successfuly" or status == "Amount of features and roadlinks do not match":
+            updateVariables = (status, dataset.get("DataSetId"))
+        else:
+            updateVariables = (dataset.get("Features with errors"), dataset.get("DataSetId"))
         dataBaseCursor.execute(updateDatasetStatus, updateVariables)
 
     return datasetsStatus
