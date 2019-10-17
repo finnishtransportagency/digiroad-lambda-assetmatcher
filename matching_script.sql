@@ -15,15 +15,18 @@ DO
 $BODY$
 DECLARE
   -- 1. Datafetch
-  -- Fetches GeoJSON data and stores it for variable. 
+  -- Fetches GeoJSON data and stores it for variable.
+  dataset_uuid uuid = %s;
+
   geojson_data jsonb := (
     SELECT json_data->'features' 
     FROM datasets 
-    WHERE dataset_id = %s
+    WHERE dataset_id = dataset_uuid
   );
   feature jsonb;
 	point_coordinates jsonb;
 	point_temp_store geometry;
+ 
 	
 BEGIN
   
@@ -185,7 +188,7 @@ BEGIN
       SET matched_roadlinks = concat_ws(
 	        ',',matched_roadlinks,(SELECT link_ids FROM edges)
       )
-      WHERE dataset_id = %s; 
+      WHERE dataset_id = dataset_uuid; 
 
       -- TRUNCATE datasets;
 
