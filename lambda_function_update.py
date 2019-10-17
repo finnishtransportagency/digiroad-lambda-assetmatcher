@@ -107,11 +107,11 @@ def storeOTHResponse(othResponse, dataBaseCursor):
     for dataset in datasetsStatus:
         print("Updating status of " + dataset.get("DataSetId"))
         updateDatasetStatus = "UPDATE datasets SET update_finished = CURRENT_TIMESTAMP, error_log = %s WHERE dataset_id = %s;"
-        status = dataset.get("Status")
-        if status == "Processed successfuly" or status == "Amount of features and roadlinks do not match":
-            updateVariables = (status, dataset.get("DataSetId"))
+        featuresWithoutErrors = dataset.get("Features with errors")
+        if not featuresWithoutErrors:
+            updateVariables = (str(dataset.get("Status")), dataset.get("DataSetId"))
         else:
-            updateVariables = (dataset.get("Features with errors"), dataset.get("DataSetId"))
+            updateVariables = (str(dataset.get("Features with errors")), dataset.get("DataSetId"))
         dataBaseCursor.execute(updateDatasetStatus, updateVariables)
 
     return datasetsStatus
