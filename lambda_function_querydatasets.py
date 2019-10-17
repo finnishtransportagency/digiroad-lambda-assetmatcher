@@ -34,6 +34,7 @@ def lambda_handler(event, context):
             if result:
                 result = result[0]
                 resultInfo = {}
+                resultInfo["DatasetId"] = datasetId
                 if withGeojson == 'yes':
                     resultInfo["GeoJson"] = result[0]
                 else:
@@ -44,8 +45,7 @@ def lambda_handler(event, context):
                     resultInfo["Error log"] = result[4]
 
                 print("Information about dataset with datasetId " + datasetId + " fetched")
-                DatasetIdResultDict = {"DatasetId": {datasetId: resultInfo}}
-                datasetsInfo.append(DatasetIdResultDict)
+                datasetsInfo.append(resultInfo)
             else:
                 nonexistentDatasets.append(datasetId)
 
