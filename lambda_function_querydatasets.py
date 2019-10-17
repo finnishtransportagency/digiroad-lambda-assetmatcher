@@ -22,31 +22,35 @@ def lambda_handler(event, context):
         nonexistentDatasets = []
 
         for datasetId in datasetIds:
-            print("Checking if dataset with datasetId " + datasetId + " exists")
-            if withGeojson == 'yes':
-                getDatasetInfo = "SELECT json_data FROM datasets WHERE dataset_id = %s"
-            else:
-                getDatasetInfo = "SELECT matched_roadlinks, matching_rate, to_char(upload_executed, 'HH24:MI:SS DD-MM-YYYY'), to_char(update_finished, 'HH24:MI:SS DD-MM-YYYY'), error_log FROM datasets WHERE dataset_id = %s"
-
-            cursor.execute(getDatasetInfo, (datasetId,))
-            result = cursor.fetchall()
-
-            if result:
-                result = result[0]
-                resultInfo = {}
-                resultInfo["DatasetId"] = datasetId
+            try:
+                print("Checking if dataset with datasetId " + datasetId + " exists")
                 if withGeojson == 'yes':
-                    resultInfo["GeoJson"] = result[0]
+                    getDatasetInfo = "SELECT json_data FROM datasets WHERE dataset_id = %s"
                 else:
-                    resultInfo["Matched roadlinks"] = result[0]
-                    resultInfo["Matched rate"] = result[1]
-                    resultInfo["Upload executed"] = result[2]
-                    resultInfo["Update finished"] = result[3]
-                    resultInfo["Error log"] = result[4]
+                    getDatasetInfo = "SELECT matched_roadlinks, matching_rate, to_char(upload_executed, 'HH24:MI:SS DD-MM-YYYY'), to_char(update_finished, 'HH24:MI:SS DD-MM-YYYY'), error_log FROM datasets WHERE dataset_id = %s"
 
-                print("Information about dataset with datasetId " + datasetId + " fetched")
-                datasetsInfo.append(resultInfo)
-            else:
+                cursor.execute(getDatasetInfo, (datasetId,))
+                result = cursor.fetchall()
+
+                if result:
+                    result = result[0]
+                    resultInfo = {}
+                    resultInfo["DatasetId"] = datasetId
+                    if withGeojson == 'yes':
+                        resultInfo["GeoJson"] = result[0]
+                    else:
+                        resultInfo["Matched roadlinks"] = result[0]
+                        resultInfo["Matched rate"] = result[1]
+                        resultInfo["Upload executed"] = result[2]
+                        resultInfo["Update finished"] = result[3]
+                        resultInfo["Error log"] = result[4]
+
+                    print("Information about dataset with datasetId " + datasetId + " fetched")
+                    datasetsInfo.append(resultInfo)
+                else:
+                    nonexistentDatasets.append(datasetId)
+            except (Exception, psycopg2.Error) as error:
+                print("DatasetId error", error)
                 nonexistentDatasets.append(datasetId)
 
         print(datasetsInfo)
