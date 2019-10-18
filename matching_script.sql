@@ -9,7 +9,6 @@
 
 -- Running the script from terminal
 -- psql -d dr_r -f matching_script.sql
--- running this in terminal requires changes for 'WHERE dataset_id = %s' on line 22 and line 188
 
 DO
 $BODY$
