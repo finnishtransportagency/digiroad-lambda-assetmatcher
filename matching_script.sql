@@ -15,7 +15,7 @@ $BODY$
 DECLARE
   -- 1. Datafetch
   -- Fetches GeoJSON data and stores it for variable.
-  dataset_uuid uuid = 'f5e77576-9cd6-44d8-8d29-e6d4ce6e6dcf';
+  dataset_uuid uuid = %s;
 
   geojson_data jsonb := (
     SELECT json_data->'features' 
