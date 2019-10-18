@@ -15,7 +15,7 @@ $BODY$
 DECLARE
   -- 1. Datafetch
   -- Fetches GeoJSON data and stores it for variable.
-  dataset_uuid uuid = %s;
+  dataset_uuid uuid = 'f5e77576-9cd6-44d8-8d29-e6d4ce6e6dcf';
 
   geojson_data jsonb := (
     SELECT json_data->'features' 
@@ -29,9 +29,10 @@ DECLARE
 	
 BEGIN
 
+  -- Inits the column as an empty column
   UPDATE datasets 
-  SET matched_roadlinks = '['
-  WHERE dataset_id = dataset_uuid;
+  SET matched_roadlinks = NULL
+  WHERE dataset_id = dataset_uuid; 
   
   -- Script prosesses one map featureat at a time.
   FOR feature IN SELECT * FROM jsonb_array_elements(geojson_data)
@@ -198,10 +199,10 @@ BEGIN
       DROP INDEX temp_points_spix;
   END LOOP;
 
+  -- Outerbrackets for 2D-array
   UPDATE datasets 
-  SET matched_roadlinks = CONCAT(matched_roadlinks,']')
+  SET matched_roadlinks = CONCAT('[',matched_roadlinks,']')
   WHERE dataset_id = dataset_uuid; 
-
 
 END;
 $BODY$
