@@ -28,6 +28,10 @@ DECLARE
  
 	
 BEGIN
+
+  UPDATE datasets 
+  SET matched_roadlinks = '['
+  WHERE dataset_id = dataset_uuid;
   
   -- Script prosesses one map featureat at a time.
   FOR feature IN SELECT * FROM jsonb_array_elements(geojson_data)
@@ -193,5 +197,11 @@ BEGIN
 
       DROP INDEX temp_points_spix;
   END LOOP;
+
+  UPDATE datasets 
+  SET matched_roadlinks = CONCAT(matched_roadlinks,']')
+  WHERE dataset_id = dataset_uuid; 
+
+
 END;
 $BODY$
