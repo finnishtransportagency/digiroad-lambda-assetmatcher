@@ -87,7 +87,29 @@ BEGIN
         WHERE temp_points.dr_link_id = dr_linkki.link_id
       );
 
-      -- 4. Selecting nearest vertexes from pgRouting topology
+      -- 4.1 Handle pointgeometry by taking the nearest roadlink and skip pgRouting
+
+      IF (lower(feature->'geometry'->>'type') = 'point') THEN
+		    WITH edges AS (
+	        SELECT 
+		        CONCAT('[', dr_link_id, ']') AS link_ids 
+	        FROM temp_points 
+	        LIMIT 1
+      	)
+
+      	UPDATE datasets 
+      		SET matched_roadlinks = concat_ws(
+	        ',',matched_roadlinks,(SELECT link_ids FROM edges)
+      		)
+      	WHERE dataset_id = dataset_uuid;
+
+        DROP INDEX temp_points_spix;
+		
+	    END IF;
+
+      CONTINUE WHEN (lower(feature->'geometry'->>'type') = 'point');
+
+      -- 4.2 Selecting nearest vertexes from pgRouting topology
 
       -- this is same procedure as in part 3 but instead of dr_linkki ids here
       -- temp_points are connected to nearest vertex which were made by 
