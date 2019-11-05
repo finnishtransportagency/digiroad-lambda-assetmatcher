@@ -22,10 +22,9 @@ def lambda_handler(event, context):
         cursor.execute(insertDataset, insertVariables)
         print("Insert dataset into PostgreSQL")
 
-        #The matching script will receive a datasetId so it knows what dataset to pro
-        #matchingScript = open("matching_script.sql", "r").read()
-        #cursor.execute(matchingScript, (datasetId,))
-        #print("Matching script executed")
+        matchingScript = open("matching_script.sql", "r").read()
+        cursor.execute(matchingScript, (datasetId,))
+        print("Matching script executed")
 
         connection.commit()
     except (Exception, psycopg2.Error) as error:
