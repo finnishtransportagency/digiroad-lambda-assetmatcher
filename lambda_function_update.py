@@ -47,13 +47,13 @@ def lambda_handler(event, context):
             print("PostgreSQL connection is closed")
         return {
             'statusCode': 400,
-            'body': json.dumps("Malformed json. Acceptable json format: [<DatasetId>,<DatasetId>,...]")
+            'body': json.dumps('Malformed json. Acceptable json format: {"DatasetIds": ["<DatasetId1>","<DatasetId2>",...]}')
         }
 
     try:
         userMessage = {}
         if selectedDatasets:
-            othMessage = sendDataSetsToOTH(selectedDatasets, cursor)
+            othMessage = send_datasets_to_oth(selectedDatasets, cursor)
             print('AWS-OTH communication finished')
 
             for datasetId in othMessage:
@@ -86,8 +86,7 @@ def lambda_handler(event, context):
         'body': json.dumps(userMessage)
     }
 
-
-def sendDataSetsToOTH(selectedDatasets, dataBaseCursor):
+def send_datasets_to_oth(selectedDatasets, dataBaseCursor):
     base_url = os.environ['OTH_MUNICIPALITY_API_URL']
     othHeaders = {'Authorization': os.environ['OTH_MUNICIPALITY_API_AUTH'], 'Content-Type': 'application/json'}
     print('Sending datasets to OTH')
@@ -95,12 +94,12 @@ def sendDataSetsToOTH(selectedDatasets, dataBaseCursor):
     response = requests.put(base_url, json=selectedDatasets, headers=othHeaders)
     print('Response fetched')
     if response.status_code == 200:
-        return storeOTHResponse(response, dataBaseCursor)
+        return store_oth_response(response, dataBaseCursor)
     else:
         raise Exception(response)
 
 
-def storeOTHResponse(othResponse, dataBaseCursor):
+def store_oth_response(othResponse, dataBaseCursor):
     print('Storing response from OTH')
     datasetsStatus = othResponse.json()
 
