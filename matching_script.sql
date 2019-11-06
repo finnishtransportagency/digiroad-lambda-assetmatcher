@@ -33,6 +33,10 @@ BEGIN
   UPDATE datasets 
   SET matched_roadlinks = NULL
   WHERE dataset_id = dataset_uuid; 
+
+  UPDATE datasets 
+  SET matching_rate_feature = NULL
+  WHERE dataset_id = dataset_uuid; 
   
   -- Script prosesses one map featureat at a time.
   FOR feature IN SELECT * FROM jsonb_array_elements(geojson_data)
@@ -214,7 +218,47 @@ BEGIN
       SET matched_roadlinks = concat_ws(
 	        ',',matched_roadlinks,(SELECT link_ids FROM edges)
       )
-      WHERE dataset_id = dataset_uuid; 
+      WHERE dataset_id = dataset_uuid;
+
+
+      -- 8.2 Calculate matching rate for lines
+      WITH dr_line AS (
+      	SELECT 
+      	st_transform(
+      		ST_BUFFER(
+      			ST_Collect(geom),
+      		2.5), 
+      	4326) AS geom
+      	FROM dr_linkki 
+      	WHERE link_id = 
+        		ANY(
+      		    ARRAY(
+           		  SELECT string_to_array(edges, ',')::int[] 
+      	 		    FROM temp_points 
+      	 		    LIMIT 1
+      		    )
+            )
+      ),
+      temp_line AS (
+      	SELECT ST_TRANSFORM(
+      			ST_BUFFER(
+      			 ST_MAKELINE(geom),
+      			0.5),
+      		   4326) AS geom
+      	FROM temp_points
+      )
+
+      UPDATE datasets 
+      SET matching_rate_feature = 
+        array_append(
+      	  matching_rate_feature, 
+          (
+      	    SELECT (ST_AREA(ST_INTERSECTION(temp_line.geom, dr_line.geom))/st_area(temp_line.geom)) 
+      	    FROM temp_line, dr_line
+      	  )
+        )
+      WHERE dataset_id = dataset_uuid;
+
 
       -- TRUNCATE datasets;
 
@@ -224,7 +268,16 @@ BEGIN
   -- Outerbrackets for 2D-array
   UPDATE datasets 
   SET matched_roadlinks = CONCAT('[',matched_roadlinks,']')
-  WHERE dataset_id = dataset_uuid; 
+  WHERE dataset_id = dataset_uuid;
+
+  -- 8.3 Get averages of the matched roadlinks
+  UPDATE datasets
+  SET matching_rate = (
+  	SELECT AVG((SELECT AVG(match_value) FROM UNNEST(matching_rate_feature) AS match_value)) 
+  	FROM datasets
+    WHERE dataset_id = dataset_uuid
+  )
+  WHERE dataset_id = dataset_uuid;
 
 END;
 $BODY$
