@@ -80,7 +80,7 @@ CREATE TABLE public.datasets (
 	json_data jsonb NOT NULL,
 	matched_roadlinks text,
 	matching_rate decimal(3,2),
-  matching_rate_feature double precision[],
+  	matching_rate_feature double precision[],
 	upload_executed timestamptz,
 	update_finished timestamptz,
 	status_log text
