@@ -32,7 +32,7 @@ def lambda_handler(event, context):
                 result = cursor.fetchall()
 
                 if result:
-                    selectedDatasets.append(result)
+                    selectedDatasets.append([result[0][0], result[0][1], eval(result[0][2])])
                     print("Dataset with datasetId " + datasetId + " ready to be send!")
                 else:
                     alreadyUploadedDatasets.append(datasetId)
@@ -53,7 +53,7 @@ def lambda_handler(event, context):
     try:
         userMessage = {}
         if selectedDatasets:
-            othMessage = send_datasets_to_oth(selectedDatasets, cursor)
+            othMessage = send_datasets_to_oth(json.dumps(selectedDatasets), cursor)
             print('AWS-OTH communication finished')
 
             for datasetId in othMessage:
