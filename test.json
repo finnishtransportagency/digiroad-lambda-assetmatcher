@@ -31,7 +31,7 @@
         "coordinates": [[385908.3310736745, 6671468.601604572, 0]],
         "crs": { "type": "name", "properties": { "name": "EPSG:3067" } }
       },
-      "properties": { "type": "obstacle", "id": 46557473, "class": 1 }
+      "properties": { "type": "obstacle", "id": 46557474, "class": 1 }
     }
   ]
 }
