@@ -4,6 +4,15 @@
     {
       "type": "Feature",
       "geometry": {
+        "type": "Point",
+        "coordinates": [[385908.3310736745, 6671468.601604572, 0]],
+        "crs": { "type": "name", "properties": { "name": "EPSG:3067" } }
+      },
+      "properties": { "type": "obstacle", "id": 46557473, "class": 1 }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "LineString",
         "coordinates": [
           [390531.355788, 6685503.72725, 0],
@@ -17,21 +26,12 @@
       "properties": {
         "type": "Roadlink",
         "id": 46557473,
-        "name": "Mannerheimintie",
+        "name": "Tikkurilantie",
         "functionalClass": "Katu",
         "speedLimit": "40",
         "pavementClass": "1",
         "sideCode": 1
       }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [[385908.3310736745, 6671468.601604572, 0]],
-        "crs": { "type": "name", "properties": { "name": "EPSG:3067" } }
-      },
-      "properties": { "type": "obstacle", "id": 46557474, "class": 1 }
     }
   ]
 }
