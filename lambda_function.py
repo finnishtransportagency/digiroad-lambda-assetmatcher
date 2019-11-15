@@ -1,7 +1,7 @@
 import json
 import psycopg2
-import base64
-
+import uuid
+import os
 
 def lambda_handler(event, context):
     try:
@@ -9,29 +9,37 @@ def lambda_handler(event, context):
                                       password = os.environ['RDS_PASSWORD'],
                                       host = os.environ['RDS_HOST'],
                                       port = os.environ['RDS_PORT'],
-                                      database = os.environ['RDS_DATABASE'])
-        connection.set_isolation_level(0)                              
+                                      database=os.environ['RDS_DATABASE'],
+                                      options=f"-c search_path={os.environ['RDS_SCHEMA']}")
         cursor = connection.cursor()
+        print("PostgreSQL connection established")
+
         data = event['body']
-        insert_query="INSERT into datasets (json_data) values ('%s')" %(data)
-        cursor.execute(insert_query)
-        script=open("matching_script.sql","r").read()
-        cursor.execute(script)
-        fetch_query="SELECT edges FROM temp_points limit 1;"
-        cursor.execute(fetch_query)
-        result=cursor.fetchall()
-        truncate_query="truncate temp_points;"
-        cursor.execute(truncate_query)
-    except (Exception, psycopg2.Error) as error :
-        print ("Error while connecting to PostgreSQL", error)
+        datasetId = str(uuid.uuid4())
+
+        insertDataset = "INSERT INTO datasets(dataset_id, json_data, upload_executed) VALUES(%s, %s, CURRENT_TIMESTAMP);"
+        insertVariables = (datasetId, data)
+        cursor.execute(insertDataset, insertVariables)
+        print("Insert dataset into PostgreSQL")
+
+        matchingScript = open("matching_script.sql", "r").read()
+        cursor.execute(matchingScript, (datasetId,))
+        print("Matching script executed")
+
+        connection.commit()
+    except (Exception, psycopg2.Error) as error:
+        print("Error while connecting to PostgreSQL", error)
+        return {
+            'statusCode': 400,
+            'body': json.dumps("Malformed geojson. Check geojson. In addition to the xy-coordinate pairs, all delivered information must have the name of the road (if available), and information whether it is a road, or used as a cycling or walking path.")
+        }
     finally:
-        #closing database connection.
-            if(connection):
-                cursor.close()
-                connection.close()
-                print("PostgreSQL connection is closed")
-    
+        if connection:
+            cursor.close()
+            connection.close()
+            print("PostgreSQL connection closed")
+
     return {
         'statusCode': 200,
-        'body': json.dumps(result[0])
-        }
+        'body': json.dumps({"DatasetId": datasetId})
+    }

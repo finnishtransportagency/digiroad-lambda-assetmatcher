@@ -1,60 +1,283 @@
-drop table if exists temp_points;
+-- The matching process.
+-- 1. Fetch stored data from dataset table.
+-- 2. Transform fetched JSON to PostGIS points and store it to temp_points table.
+-- 3. Buffering new temp_points and getting a link_id from nearest dr_linkki
+-- 4. Selecting nearest vertexes from pgRouting topology
+-- 5. Slecting the the A and B for routing
+-- 6. Using the topology to get all edges in the route between features A and B
+-- 7. Storing the final result on datasets table
 
-create table temp_points (id serial, dr_link_id integer, fraction float, dr_vertex_id integer, geom geometry(PointZ,3067));
+-- Running the script from terminal
+-- psql -d dr_r -f matching_script.sql
 
-insert into temp_points (geom) select (dp).geom from (SELECT ST_DumpPoints(ST_GeomFromGeoJSON((select json_data->'features'->0->'geometry' from datasets))) as dp) foo;
+DO
+$BODY$
+DECLARE
+  -- 1. Datafetch
+  -- Fetches GeoJSON data and stores it for variable.
+  dataset_uuid uuid = %s;
 
-alter table temp_points alter column geom type geometry(Point,3067) using ST_Force2D(geom);
-
-create index temp_points_spix on temp_points using gist(geom);
-
-alter table temp_points add column side char(1) default 'b';
-
-alter table temp_points add column edges text;
-
-alter table temp_points add column source int;
-alter table temp_points add column target int;
+  geojson_data jsonb := (
+    SELECT json_data->'features'
+    FROM datasets
+    WHERE dataset_id = dataset_uuid
+  );
+  feature jsonb;
+	point_coordinates jsonb;
+	point_temp_store geometry;
 
 
-update temp_points point set dr_link_id =
-(select v.link_id
-from dr_linkki v, temp_points p
-where p.id = point.id and ST_Buffer(point.geom,50) && v.geom
-order by p.geom <-> v.geom asc limit 1);
+BEGIN
 
-update temp_points point set fraction =
-(select ST_LineLocatePoint(v.geom,point.geom)
-from dr_linkki v
-where point.dr_link_id = v.link_id);
+  -- Inits the column as an empty column
+  UPDATE datasets
+  SET matched_roadlinks = NULL
+  WHERE dataset_id = dataset_uuid;
 
-update temp_points point set dr_vertex_id =
-(select v.id
-from dr_linkki_vertices_pgr v, temp_points p
-where p.id = point.id and ST_Buffer(p.geom, 50) && v.the_geom
-order by p.geom <-> v.the_geom asc limit 1);
+  UPDATE datasets
+  SET matching_rate_feature = NULL
+  WHERE dataset_id = dataset_uuid;
 
-update temp_points p set source =
-(select case
-  when p.dr_vertex_id is not null then p.dr_vertex_id
-  else -1*p.id
-end as source);
+  -- Script prosesses one map featureat at a time.
+  FOR feature IN SELECT * FROM jsonb_array_elements(geojson_data)
+    LOOP
 
-update temp_points p set target =
-(select case
-  when p.dr_vertex_id is not null then p.dr_vertex_id
-  else -1*p.id
-end as target);
+    -- for every feature temp_points tabel is emptied and serial reset.
+    -- below script is designed to use serial id.
+    TRUNCATE TABLE temp_points RESTART IDENTITY CASCADE;
 
-with first_point as (select * from temp_points order by id limit 1),
-last_point as (select * from temp_points order by id desc limit 1)
-update temp_points set edges =
-(SELECT string_agg(edge,',') from
-(SELECT distinct edge::text FROM pgr_withPoints(
-  'SELECT link_id as id, source, target, cost, cost as reverse_cost FROM public.dr_linkki ORDER BY id',
-  'SELECT id as pid, dr_link_id edge_id, fraction, side from public.temp_points where dr_link_id IS NOT Null',
-  (select source from first_point),(select target from last_point),
- details := true) where edge != -1) foo);
- 
-truncate datasets;
+    -- 2. line feature is made to points in order to be used in pgRouting.
+    FOR point_coordinates IN
+    SELECT * FROM jsonb_array_elements(feature->'geometry'->'coordinates')
 
-drop index temp_points_spix;
+      LOOP
+        point_temp_store = ST_SETSRID(
+          ST_MAKEPOINT(
+            cast(point_coordinates->0 as double precision),
+            cast(point_coordinates->1 as double precision)
+          ),
+          3067);
+
+        INSERT INTO temp_points (geom) VALUES (point_temp_store);
+      END LOOP;
+
+
+
+      -- This might enhance performance but more important is that dr_linkki has spatial index.
+      CREATE INDEX temp_points_spix ON temp_points USING GIST(geom);
+
+
+      -- 3. Buffering new temp_points and getting a link_id from nearest dr_linkki
+
+
+      -- The && operator returns TRUE if the 2D bounding box of geometry
+      -- A intersects the 2D bounding box of geometry B.
+
+      -- <-> — Returns the 2D distance between A and B.
+
+      UPDATE temp_points
+      SET dr_link_id =(
+        SELECT dr_linkki.link_id
+        FROM dr_linkki
+        WHERE ST_Buffer(temp_points.geom,50) && dr_linkki.geom
+        ORDER BY temp_points.geom <-> dr_linkki.geom ASC
+        LIMIT 1
+      );
+
+      UPDATE temp_points
+      SET fraction = (
+        SELECT ST_LineLocatePoint(dr_linkki.geom,temp_points.geom)
+        FROM dr_linkki
+        WHERE temp_points.dr_link_id = dr_linkki.link_id
+      );
+
+      -- 4.1 Handle pointgeometry by taking the nearest roadlink and skip pgRouting
+
+      IF (lower(feature->'geometry'->>'type') = 'point') THEN
+		    WITH edges AS (
+	        SELECT
+		        CONCAT('[', dr_link_id, ']') AS link_ids
+	        FROM temp_points
+	        LIMIT 1
+      	)
+
+      	UPDATE datasets
+      		SET matched_roadlinks = concat_ws(
+	        ',',matched_roadlinks,(SELECT link_ids FROM edges)
+      		)
+      	WHERE dataset_id = dataset_uuid;
+
+        DROP INDEX temp_points_spix;
+
+	    END IF;
+
+      CONTINUE WHEN (lower(feature->'geometry'->>'type') = 'point');
+
+      -- 4.2 Selecting nearest vertexes from pgRouting topology
+
+      -- this is same procedure as in part 3 but instead of dr_linkki ids here
+      -- temp_points are connected to nearest vertex which were made by
+      -- pgr_createTopology-function in pgRouting
+      UPDATE temp_points
+      SET dr_vertex_id = (
+        SELECT lnk_vrx.id
+        FROM dr_linkki_vertices_pgr lnk_vrx
+        WHERE ST_Buffer(temp_points.geom, 5) && lnk_vrx.the_geom -- 50m might be overkill?
+        ORDER BY temp_points.geom <-> lnk_vrx.the_geom ASC
+        LIMIT 1
+      );
+
+      -- 5. Slecting the the A and B for routing
+      -- this prosess depends on tables id column which has to be serial
+
+      -- pgr_withPoints()-function doesn't understand NULL-values thats why
+      -- temp_points tabel's id is used in case when vertex is missing.
+      UPDATE temp_points
+      SET source = (
+        SELECT
+        CASE
+          WHEN temp_points.dr_vertex_id IS NOT NULL THEN temp_points.dr_vertex_id
+          ELSE -1 * temp_points.id
+        END
+      );
+
+      UPDATE temp_points
+      SET target = (
+        SELECT
+        CASE
+          WHEN temp_points.dr_vertex_id IS NOT NULL
+            THEN temp_points.dr_vertex_id
+          ELSE -1 * temp_points.id
+        END
+      );
+
+
+      -- pgRouting uses first & last points for routing from A to B
+      -- but the route can also contain more points alongside the route
+
+      WITH first_point AS (
+        SELECT *
+        FROM temp_points
+        ORDER BY id ASC
+        LIMIT 1
+      ),
+      last_point AS (
+        SELECT *
+        FROM temp_points
+        ORDER BY id DESC
+        LIMIT 1
+      )
+
+      -- 6. Using the topology to get all edges in the route between features A and B
+      -- pgr_withPoints(edges_sql, points_sql, from_vid,  to_vid  [, directed] [, driving_side] [, details])
+
+      UPDATE temp_points
+      SET edges = (
+        SELECT string_agg(edge,',')
+        FROM (
+          SELECT DISTINCT edge::text
+          FROM pgr_withPoints(
+          'SELECT
+              link_id AS id,
+              source,
+              target,
+              cost,
+              cost AS reverse_cost
+            FROM public.dr_linkki
+            ORDER BY id',
+
+          'SELECT
+              id AS pid,
+              dr_link_id AS edge_id,
+              fraction,
+              side
+            FROM public.temp_points
+            WHERE dr_link_id IS NOT NULL',
+
+          (SELECT source FROM first_point),
+            (SELECT target FROM last_point),
+            details := true)
+        WHERE edge != -1)
+        RETURN
+      );
+
+      -- 7. Datastoring with manuall text array
+
+      -- PostgeSQL was not fuctioning as we hoped for storing multidimentional arrays.
+      -- Cause of the problems were empty arrays and arrays with only single value.
+      -- We decided to do this with text/string and parcing it elsewhere.
+
+      WITH edges AS (
+	      SELECT
+		      CONCAT('[', edges, ']') AS link_ids
+	      FROM temp_points
+	      LIMIT 1
+      )
+
+      UPDATE datasets
+      SET matched_roadlinks = concat_ws(
+	        ',',matched_roadlinks,(SELECT link_ids FROM edges)
+      )
+      WHERE dataset_id = dataset_uuid;
+
+
+      -- 8.2 Calculate matching rate for lines
+      WITH dr_line AS (
+      	SELECT
+      	st_transform(
+      		ST_BUFFER(
+      			ST_Collect(geom),
+      		2.5),
+      	4326) AS geom
+      	FROM dr_linkki
+      	WHERE link_id =
+        		ANY(
+      		    ARRAY(
+           		  SELECT string_to_array(edges, ',')::int[]
+      	 		    FROM temp_points
+      	 		    LIMIT 1
+      		    )
+            )
+      ),
+      temp_line AS (
+      	SELECT ST_TRANSFORM(
+      			ST_BUFFER(
+      			 ST_MAKELINE(geom),
+      			0.5),
+      		   4326) AS geom
+      	FROM temp_points
+      )
+
+      UPDATE datasets
+      SET matching_rate_feature =
+        array_append(
+      	  matching_rate_feature,
+          (
+      	    SELECT (ST_AREA(ST_INTERSECTION(temp_line.geom, dr_line.geom))/st_area(temp_line.geom))
+      	    FROM temp_line, dr_line
+      	  )
+        )
+      WHERE dataset_id = dataset_uuid;
+
+
+      -- TRUNCATE datasets;
+
+      DROP INDEX temp_points_spix;
+  END LOOP;
+
+  -- Outerbrackets for 2D-array
+  UPDATE datasets
+  SET matched_roadlinks = CONCAT('[',matched_roadlinks,']')
+  WHERE dataset_id = dataset_uuid;
+
+  -- 8.3 Get averages of the matched roadlinks
+  UPDATE datasets
+  SET matching_rate = (
+  	SELECT AVG((SELECT AVG(match_value) FROM UNNEST(matching_rate_feature) AS match_value))
+  	FROM datasets
+    WHERE dataset_id = dataset_uuid
+  )
+  WHERE dataset_id = dataset_uuid;
+
+END;
+$BODY$

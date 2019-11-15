@@ -1,0 +1,2237 @@
+{
+	"type" : "FeatureCollection",
+	"name" : "keskilinjat00",
+	"features" : [
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0227634023, 60.2908225764 ],
+					[ 25.0223405915, 60.2909212799 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M2 (AL2)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "False",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "40",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0222294654, 60.2908026653 ],
+					[ 25.0227725568, 60.2906833379 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M2 (AL2)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "False",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "40",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.023322761, 60.2906918981 ],
+					[ 25.0232254161, 60.2907147187 ],
+					[ 25.0227634023, 60.2908225764 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M2 (AL2)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "False",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "40",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0232278406, 60.2905833011 ],
+					[ 25.0247120862, 60.2902571615 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M2 (AL2)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "False",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "40",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0189537623, 60.2913719005 ],
+					[ 25.0190152143, 60.2913614288 ],
+					[ 25.0192329412, 60.2913249798 ],
+					[ 25.0193737533, 60.2913017991 ],
+					[ 25.0204815527, 60.2911243699 ],
+					[ 25.020974711, 60.2910454482 ],
+					[ 25.0213918068, 60.2909758846 ],
+					[ 25.021587708, 60.2909400636 ],
+					[ 25.0217222552, 60.2909129788 ],
+					[ 25.0218493442, 60.2908861832 ],
+					[ 25.0222294654, 60.2908026653 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M2 (AL2)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "False",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "40",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0190138323, 60.2914568826 ],
+					[ 25.0189536456, 60.2914672093 ],
+					[ 25.0183305879, 60.2915778315 ],
+					[ 25.0181945506, 60.2916004068 ],
+					[ 25.0176150815, 60.291693776 ],
+					[ 25.0171489494, 60.2917677386 ],
+					[ 25.017111125, 60.2917743789 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M2 (AL2)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "False",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "40",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0223405915, 60.2909212799 ],
+					[ 25.0221492803, 60.2909659402 ],
+					[ 25.0220099583, 60.2909950517 ],
+					[ 25.0218703104, 60.2910224766 ],
+					[ 25.0217350104, 60.2910466575 ],
+					[ 25.0215991609, 60.2910700017 ],
+					[ 25.0214240497, 60.2910976649 ],
+					[ 25.0212463108, 60.2911217167 ],
+					[ 25.0209555361, 60.2911606421 ],
+					[ 25.0205307676, 60.2912174247 ],
+					[ 25.0203206875, 60.2912468758 ],
+					[ 25.0201117517, 60.2912780441 ],
+					[ 25.0196936115, 60.2913442809 ],
+					[ 25.0192203376, 60.2914214504 ],
+					[ 25.0190138323, 60.2914568826 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M2 (AL2)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "False",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "40",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0061773631, 60.2919941745 ],
+					[ 25.0067011014, 60.2919976715 ],
+					[ 25.0072400856, 60.2919993713 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0074776066, 60.2920854402 ],
+					[ 25.0069260989, 60.2920835955 ],
+					[ 25.0065109325, 60.2920838855 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0061304833, 60.2919938691 ],
+					[ 25.0061773631, 60.2919941745 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0058220593, 60.2919929341 ],
+					[ 25.005905509, 60.2919926532 ],
+					[ 25.0060869413, 60.2919936338 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0060762719, 60.2920818829 ],
+					[ 25.0057930123, 60.2920834379 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0065109325, 60.2920838855 ],
+					[ 25.0060791728, 60.2920818962 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0054317068, 60.2920854205 ],
+					[ 25.0053637932, 60.2920857931 ],
+					[ 25.0049324793, 60.2920941251 ],
+					[ 25.0047155641, 60.2920969947 ],
+					[ 25.0045232892, 60.2920979464 ],
+					[ 25.0043913204, 60.2920974043 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0041965053, 60.2920337769 ],
+					[ 25.0050583575, 60.2920051368 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0055399457, 60.2919938834 ],
+					[ 25.0055618841, 60.2919938096 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0054943063, 60.2920850771 ],
+					[ 25.0054317068, 60.2920854205 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0057930123, 60.2920834379 ],
+					[ 25.005541221, 60.2920848197 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0050583575, 60.2920051368 ],
+					[ 25.0052497133, 60.2920002259 ],
+					[ 25.0054797824, 60.2919940857 ],
+					[ 25.0055399457, 60.2919938834 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0131631856, 60.2920192931 ],
+					[ 25.0138433581, 60.2920206187 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Silta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0072400856, 60.2919993713 ],
+					[ 25.0092298067, 60.2920056274 ],
+					[ 25.0092579883, 60.2920057464 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0093209607, 60.2920918954 ],
+					[ 25.0092270702, 60.2920912765 ],
+					[ 25.0074776066, 60.2920854402 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0106165195, 60.2920109108 ],
+					[ 25.011142884, 60.2920121569 ],
+					[ 25.0111602869, 60.2920121262 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.010572986, 60.2920982611 ],
+					[ 25.0103081121, 60.2920983987 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0093385898, 60.2920060869 ],
+					[ 25.0095445055, 60.2920069563 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0097545758, 60.292007843 ],
+					[ 25.0098060781, 60.2920080603 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0097344207, 60.2920946202 ],
+					[ 25.0096004308, 60.2920937373 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0094806341, 60.2920929478 ],
+					[ 25.0093209607, 60.2920918954 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0152267112, 60.291961157 ],
+					[ 25.015564911, 60.2919372242 ],
+					[ 25.0156003947, 60.2919338681 ],
+					[ 25.0156747016, 60.2919250388 ],
+					[ 25.0158122315, 60.2919090985 ],
+					[ 25.0159435687, 60.291893019 ],
+					[ 25.0161661082, 60.2918625936 ],
+					[ 25.0164055845, 60.2918269931 ],
+					[ 25.0164408338, 60.2918206249 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "False",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "40",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0164291391, 60.2918948594 ],
+					[ 25.0162513767, 60.291920817 ],
+					[ 25.0160345165, 60.2919496256 ],
+					[ 25.015831222, 60.2919739603 ],
+					[ 25.015642103, 60.2919943171 ],
+					[ 25.0155119424, 60.2920070672 ],
+					[ 25.0152803632, 60.2920272432 ],
+					[ 25.0151996371, 60.2920333363 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "40",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0138433838, 60.2920814075 ],
+					[ 25.013019042, 60.2920896126 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Silta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0130181407, 60.29201901 ],
+					[ 25.0131631856, 60.2920192931 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Silta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0167870418, 60.2918312729 ],
+					[ 25.0164801475, 60.2918857971 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "False",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "40",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0109890055, 60.2920980439 ],
+					[ 25.010572986, 60.2920982611 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.013019042, 60.2920896126 ],
+					[ 25.0124336826, 60.2920947728 ],
+					[ 25.0123271039, 60.2920949274 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0103081121, 60.2920983987 ],
+					[ 25.0098134217, 60.2920951406 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0092579883, 60.2920057464 ],
+					[ 25.0093385898, 60.2920060869 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0095445055, 60.2920069563 ],
+					[ 25.0097545758, 60.292007843 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0111602869, 60.2920121262 ],
+					[ 25.0116959448, 60.2920111791 ],
+					[ 25.0117323085, 60.2920115185 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0122819438, 60.2920166467 ],
+					[ 25.0123127785, 60.2920169343 ],
+					[ 25.0127948949, 60.2920180779 ],
+					[ 25.0130181407, 60.29201901 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0120615165, 60.2920145903 ],
+					[ 25.0122819438, 60.2920166467 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0123271039, 60.2920949274 ],
+					[ 25.0120390905, 60.2920953447 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0117008057, 60.292095834 ],
+					[ 25.0116865994, 60.2920958545 ],
+					[ 25.0110979586, 60.2920979868 ],
+					[ 25.0109890055, 60.2920980439 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0120390905, 60.2920953447 ],
+					[ 25.0117319217, 60.292095789 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0227725568, 60.2906833379 ],
+					[ 25.0232278406, 60.2905833011 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M2 (AL2)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "False",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "40",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0096004308, 60.2920937373 ],
+					[ 25.0094806341, 60.2920929478 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0170675885, 60.291705698 ],
+					[ 25.0175311644, 60.2916143085 ],
+					[ 25.0189537623, 60.2913719005 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M2 (AL2)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "False",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "40",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0167777707, 60.291759753 ],
+					[ 25.0170675885, 60.291705698 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M2 (AL2)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "False",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "40",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.017111125, 60.2917743789 ],
+					[ 25.0167870418, 60.2918312729 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M2 (AL2)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "False",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "40",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0164408338, 60.2918206249 ],
+					[ 25.0167777707, 60.291759753 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "False",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "40",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0164801475, 60.2918857971 ],
+					[ 25.0164291391, 60.2918948594 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "False",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "40",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.014635432, 60.2920002457 ],
+					[ 25.0146730238, 60.2919984345 ],
+					[ 25.0149504989, 60.2919821065 ],
+					[ 25.0150933856, 60.2919714459 ],
+					[ 25.0152267112, 60.291961157 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "40",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0138433581, 60.2920206187 ],
+					[ 25.014005191, 60.2920192888 ],
+					[ 25.0142265204, 60.2920134791 ],
+					[ 25.0143949388, 60.2920099586 ],
+					[ 25.0145300084, 60.2920053252 ],
+					[ 25.014635432, 60.2920002457 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "40",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0146438043, 60.2920662986 ],
+					[ 25.0145975559, 60.292068168 ],
+					[ 25.0144386981, 60.292073926 ],
+					[ 25.014393511, 60.2920751964 ],
+					[ 25.0141791981, 60.2920776866 ],
+					[ 25.0138433838, 60.2920814075 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "40",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0151996371, 60.2920333363 ],
+					[ 25.0151189109, 60.2920394293 ],
+					[ 25.0149345416, 60.2920514753 ],
+					[ 25.0148371634, 60.2920570385 ],
+					[ 25.0146847162, 60.292064645 ],
+					[ 25.0146438043, 60.2920662986 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "40",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0117323085, 60.2920115185 ],
+					[ 25.0120615165, 60.2920145903 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0117319217, 60.292095789 ],
+					[ 25.0117008057, 60.292095834 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0098185637, 60.292008113 ],
+					[ 25.0103091036, 60.292010182 ],
+					[ 25.0106165195, 60.2920109108 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0098060781, 60.2920080603 ],
+					[ 25.0098185637, 60.292008113 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0098134217, 60.2920951406 ],
+					[ 25.0097344207, 60.2920946202 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0055618841, 60.2919938096 ],
+					[ 25.0058220593, 60.2919929341 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.005541221, 60.2920848197 ],
+					[ 25.0054943063, 60.2920850771 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0060869413, 60.2919936338 ],
+					[ 25.0061304833, 60.2919938691 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0060791728, 60.2920818962 ],
+					[ 25.0060762719, 60.2920818829 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0041954576, 60.2920965995 ],
+					[ 25.0040150543, 60.2920719865 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "False",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0043913204, 60.2920974043 ],
+					[ 25.0041954576, 60.2920965995 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "True",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 25.0040150543, 60.2920719865 ],
+					[ 25.0041965053, 60.2920337769 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "False",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Digitointisuuntaan"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "LineString",
+				"coordinates" : [
+					[ 24.9997829342, 60.2923090492 ],
+					[ 24.9997942924, 60.2923079871 ],
+					[ 24.9998831519, 60.2922997261 ],
+					[ 24.9999720585, 60.2922915913 ],
+					[ 25.0000610347, 60.2922836458 ],
+					[ 25.0001501009, 60.2922759533 ],
+					[ 25.0002392758, 60.2922685775 ],
+					[ 25.0003285751, 60.2922615823 ],
+					[ 25.00041801, 60.2922550281 ],
+					[ 25.0005075683, 60.2922489034 ],
+					[ 25.0005972226, 60.292243135 ],
+					[ 25.0006869484, 60.2922376472 ],
+					[ 25.000776724, 60.2922323643 ],
+					[ 25.0008665301, 60.2922272107 ],
+					[ 25.0009563486, 60.2922221105 ],
+					[ 25.0010461639, 60.2922169966 ],
+					[ 25.0011359725, 60.292211854 ],
+					[ 25.0012257754, 60.2922066869 ],
+					[ 25.0013155736, 60.2922014999 ],
+					[ 25.0014053682, 60.2921962973 ],
+					[ 25.0014951601, 60.2921910836 ],
+					[ 25.0015849504, 60.2921858631 ],
+					[ 25.0016747401, 60.2921806403 ],
+					[ 25.0017645304, 60.2921754196 ],
+					[ 25.0018543221, 60.2921702054 ],
+					[ 25.0019441161, 60.2921650007 ],
+					[ 25.0020339113, 60.2921598015 ],
+					[ 25.0021237063, 60.2921546011 ],
+					[ 25.0022134994, 60.292149393 ],
+					[ 25.0023032892, 60.2921441708 ],
+					[ 25.0023930741, 60.2921389279 ],
+					[ 25.0024828525, 60.2921336578 ],
+					[ 25.0025726228, 60.292128354 ],
+					[ 25.0026623835, 60.29212301 ],
+					[ 25.0027521328, 60.2921176193 ],
+					[ 25.0028418709, 60.2921121828 ],
+					[ 25.0029316152, 60.292106772 ],
+					[ 25.0030213924, 60.2921014971 ],
+					[ 25.003111227, 60.2920964691 ],
+					[ 25.00320114, 60.2920917989 ],
+					[ 25.003291145, 60.292087588 ],
+					[ 25.0033812393, 60.2920838778 ],
+					[ 25.0034714143, 60.292080687 ],
+					[ 25.00356166, 60.2920780347 ],
+					[ 25.003651965, 60.292075937 ],
+					[ 25.003742313, 60.2920743601 ],
+					[ 25.003832688, 60.2920732286 ],
+					[ 25.0039230787, 60.2920724651 ],
+					[ 25.0040150543, 60.2920719865 ]
+				]
+			},
+			"properties" : {
+				"HALLINN_LK" : "",
+				"HIERARKIA" : "",
+				"ST_KOROKE" : "",
+				"LEVEYS" : "",
+				"ST_LVALOT" : "",
+				"LUOKKA" : "Pääkatu",
+				"NIMI" : "Tikkurilantie",
+				"PAALLYSTE" : "Asfaltti",
+				"TALVKUNPIT" : "",
+				"TASO" : "Maanpinta",
+				"TYYPPI" : "Ajorata",
+				"VALAISTU" : "M3b (AL4a)",
+				"ST_VIISTE" : "",
+				"AJOKAISTA" : "False",
+				"JALANKULKU" : "False",
+				"KUNPITLUOK" : "1",
+				"NOPRAJ" : "50",
+				"PYORÄILY" : "False",
+				"SUUNTA" : "Molempiin suuntiin"
+			}
+		}
+	]
+}
