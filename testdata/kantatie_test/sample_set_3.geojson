@@ -1,0 +1,133 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Simontie",
+        "speedLimit": "30",
+        "sideCode": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            390998.9634223291,
+            6686913.154021331
+          ],
+          [
+            390997.69649336184,
+            6686913.893834425
+          ],
+          [
+            390996.3067652718,
+            6686914.509033491
+          ],
+          [
+            390995.0448862424,
+            6686914.913639896
+          ],
+          [
+            390944.2485094063,
+            6686925.311706322
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Kuminatie",
+        "speedLimit": "30",
+        "sideCode": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            390639.1855724156,
+            6685613.7580173705
+          ],
+          [
+            390627.50552366604,
+            6685614.371039909
+          ],
+          [
+            390613.899732312,
+            6685615.127326722
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Koivuhaankuja",
+        "speedLimit": "30",
+        "sideCode": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            389546.5636950811,
+            6686895.508011611
+          ],
+          [
+            389544.61601609865,
+            6686898.209205908
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Tornimäki",
+        "speedLimit": "30",
+        "sideCode": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            391312.5751657004,
+            6687624.126677186
+          ],
+          [
+            391287.8345189717,
+            6687609.5008915495
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    }
+  ]
+}

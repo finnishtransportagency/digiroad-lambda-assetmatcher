@@ -1,0 +1,345 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Ala-Tikkurilantie",
+        "speedLimit": "80",
+        "sideCode": "2"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            390224.87568237516,
+            6684811.573758275
+          ],
+          [
+            390240.6576578588,
+            6684801.412684951
+          ],
+          [
+            390275.7476880348,
+            6684780.446332164
+          ],
+          [
+            390311.0751176516,
+            6684761.105494151
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Teilimäki",
+        "speedLimit": "30",
+        "sideCode": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            388669.2820014738,
+            6686842.79672809
+          ],
+          [
+            388771.7368708965,
+            6686831.682669942
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Ala-Tikkurilantie",
+        "speedLimit": "80",
+        "sideCode": "2"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            390054.1960151157,
+            6684924.846482356
+          ],
+          [
+            390100.1013637201,
+            6684905.550733176
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Kehä III",
+        "speedLimit": "80",
+        "sideCode": "2"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            387707.9094522905,
+            6685665.139950207
+          ],
+          [
+            387717.48108061345,
+            6685656.756507606
+          ],
+          [
+            387718.1172176385,
+            6685656.167412245
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Unikkotie",
+        "speedLimit": "40",
+        "sideCode": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            391227.3196826989,
+            6685649.524712879
+          ],
+          [
+            391222.5308557276,
+            6685650.279390241
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Perintötie",
+        "speedLimit": "50",
+        "sideCode": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            387692.8854657917,
+            6686045.901238593
+          ],
+          [
+            387696.44101893215,
+            6686075.681901309
+          ],
+          [
+            387700.05823159247,
+            6686106.952125668
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Ilolantie",
+        "speedLimit": "30",
+        "sideCode": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            390748.79846538283,
+            6689395.754715731
+          ],
+          [
+            390756.96280465764,
+            6689397.6813873
+          ],
+          [
+            390787.13055798487,
+            6689405.257045339
+          ],
+          [
+            390822.74785464606,
+            6689414.20117954
+          ],
+          [
+            390826.011816671,
+            6689415.049363848
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Ala-Tikkurilantie",
+        "speedLimit": "80",
+        "sideCode": "2"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            389938.0883281668,
+            6684969.811497089
+          ],
+          [
+            389997.20989561465,
+            6684947.931193683
+          ],
+          [
+            390020.90586599865,
+            6684938.776463969
+          ],
+          [
+            390043.29446489475,
+            6684929.588802419
+          ],
+          [
+            390054.1960151157,
+            6684924.846482356
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Ylästöntie",
+        "speedLimit": "40",
+        "sideCode": "2"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            387072.9382949948,
+            6685054.294506461
+          ],
+          [
+            387075.50212088367,
+            6685052.748974739
+          ],
+          [
+            387078.3349236025,
+            6685051.780935405
+          ],
+          [
+            387081.3084172477,
+            6685051.434226941
+          ],
+          [
+            387084.2879446315,
+            6685051.724550318
+          ],
+          [
+            387087.1385753157,
+            6685052.638757979
+          ],
+          [
+            387089.7312160728,
+            6685054.135449234
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Ilolantie",
+        "speedLimit": "30",
+        "sideCode": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            390740.6383288368,
+            6689393.829035904
+          ],
+          [
+            390748.79846538283,
+            6689395.754715731
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    }
+  ]
+}
