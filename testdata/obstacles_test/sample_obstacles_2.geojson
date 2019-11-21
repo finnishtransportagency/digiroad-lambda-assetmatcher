@@ -1,0 +1,215 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.111464653,
+          60.3043624442
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 11,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.1115583849,
+          60.302333278
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 12,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.1136689923,
+          60.301463826
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 13,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.1124245546,
+          60.2997137982
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 14,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.1103498645,
+          60.2978823669
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 15,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.1133158405,
+          60.2973140251
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 16,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.115324938,
+          60.2968191303
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 17,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.1119869863,
+          60.2895256551
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 18,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.1087589426,
+          60.2889105765
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 19,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.1052817581,
+          60.2863826291
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 20,
+        "class": 1,
+        "type": "obstacle"
+      }
+    }
+  ]
+}

@@ -1,0 +1,635 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.0943395072,
+          60.2718121567
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 31,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.0912584018,
+          60.2685656024
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 32,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.0958412744,
+          60.2676271361
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 33,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.0971945342,
+          60.2673171439
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 34,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.0947886979,
+          60.2634179394
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 35,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.1016189182,
+          60.262416117
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 36,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.1073511072,
+          60.2606942625
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 37,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.1049429616,
+          60.2472712164
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 38,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.1092385148,
+          60.2444852695
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 39,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.0849172708,
+          60.249130061
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 40,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.0891846967,
+          60.2464145076
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 41,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.0726390269,
+          60.3689950873
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 42,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.073276773,
+          60.3677532359
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 43,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.0705495317,
+          60.3679639139
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 44,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.0679124561,
+          60.3664120466
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 45,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.0865205965,
+          60.3657107794
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 46,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.0877972915,
+          60.3641293538
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 47,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.0900894174,
+          60.360451179
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 48,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.0973537534,
+          60.3593399207
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 49,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.0890966301,
+          60.3547051173
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 50,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.0724750642,
+          60.3598070207
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 51,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.080317612,
+          60.3568225121
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 52,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.0540904514,
+          60.3569663466
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 53,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.0463115517,
+          60.3520552444
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 54,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.0598788381,
+          60.3514030982
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 55,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.0587186293,
+          60.3491776636
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 56,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.0595653041,
+          60.3489462118
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 57,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.0599345461,
+          60.3486780623
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 58,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.06791157,
+          60.3474067476
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 59,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.076743698,
+          60.3510177573
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 60,
+        "class": 1,
+        "type": "obstacle"
+      }
+    }
+  ]
+}

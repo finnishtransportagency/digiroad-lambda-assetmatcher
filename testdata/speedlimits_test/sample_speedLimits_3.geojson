@@ -1,0 +1,1315 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Muuntotie",
+        "speedLimit": "40",
+        "sideCode": 1,
+        "id": 31,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            387812.1238851759,
+            6684841.500027182
+          ],
+          [
+            387812.18741174584,
+            6684851.787793676
+          ],
+          [
+            387812.4151493113,
+            6684882.07765885
+          ],
+          [
+            387812.6087290699,
+            6684907.824159863
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Siipitie",
+        "speedLimit": "50",
+        "sideCode": 1,
+        "id": 32,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            388237.4476865893,
+            6687349.776381206
+          ],
+          [
+            388233.1397182807,
+            6687364.352782425
+          ],
+          [
+            388228.1918348722,
+            6687379.507400765
+          ],
+          [
+            388225.44473660085,
+            6687387.047999921
+          ],
+          [
+            388223.831965798,
+            6687391.027885382
+          ],
+          [
+            388222.3014858314,
+            6687394.804699255
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Perintötie",
+        "speedLimit": "50",
+        "sideCode": 1,
+        "id": 33,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            387728.3599777776,
+            6686348.520276414
+          ],
+          [
+            387729.41715921264,
+            6686354.519663748
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Osmankäämintie",
+        "speedLimit": "40",
+        "sideCode": 1,
+        "id": 34,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            390712.8919189467,
+            6686690.568078991
+          ],
+          [
+            390716.6917520472,
+            6686694.283886329
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Siipitie",
+        "speedLimit": "50",
+        "sideCode": 1,
+        "id": 35,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            388200.432579387,
+            6687441.572083057
+          ],
+          [
+            388195.9175111996,
+            6687451.06487757
+          ],
+          [
+            388194.7481789632,
+            6687453.531465621
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Muuntotie",
+        "speedLimit": "40",
+        "sideCode": 1,
+        "id": 36,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            387811.7544321577,
+            6684803.111906851
+          ],
+          [
+            387811.92694133666,
+            6684809.605797197
+          ],
+          [
+            387812.0379614865,
+            6684827.585100778
+          ],
+          [
+            387812.1238851759,
+            6684841.500027182
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Ilolantie",
+        "speedLimit": "30",
+        "sideCode": 1,
+        "id": 37,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            390882.58190833207,
+            6689429.511723131
+          ],
+          [
+            390889.72544224106,
+            6689431.30028469
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Ylästöntie",
+        "speedLimit": "50",
+        "sideCode": 1,
+        "id": 38,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            385949.68286331726,
+            6684630.020338895
+          ],
+          [
+            385957.94064912817,
+            6684636.648312992
+          ],
+          [
+            385967.0798718229,
+            6684644.694629595
+          ],
+          [
+            385975.86143967195,
+            6684653.292371397
+          ],
+          [
+            385986.89417999133,
+            6684665.189696795
+          ],
+          [
+            386002.7144811489,
+            6684683.761601163
+          ],
+          [
+            386018.20966459805,
+            6684702.47068339
+          ],
+          [
+            386036.0490720335,
+            6684724.346674156
+          ],
+          [
+            386053.767428618,
+            6684745.652720608
+          ],
+          [
+            386066.9682799432,
+            6684760.8794087535
+          ],
+          [
+            386077.7580809113,
+            6684772.982284484
+          ],
+          [
+            386102.85727902234,
+            6684799.106468594
+          ],
+          [
+            386134.2752474872,
+            6684830.781294929
+          ],
+          [
+            386151.8201949415,
+            6684847.630276995
+          ],
+          [
+            386160.65422094445,
+            6684855.936426272
+          ],
+          [
+            386175.28487523115,
+            6684869.631323307
+          ],
+          [
+            386187.28038365336,
+            6684880.454361285
+          ],
+          [
+            386199.5641346914,
+            6684890.818596141
+          ],
+          [
+            386212.67335393897,
+            6684900.718251492
+          ],
+          [
+            386221.9921108071,
+            6684907.3321088515
+          ],
+          [
+            386235.0372508058,
+            6684916.03847905
+          ],
+          [
+            386239.7280386755,
+            6684918.973269203
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Siipitie",
+        "speedLimit": "50",
+        "sideCode": 1,
+        "id": 39,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            388209.11178820406,
+            6687423.324310393
+          ],
+          [
+            388208.31736804626,
+            6687424.994554525
+          ],
+          [
+            388200.432579387,
+            6687441.572083057
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Ilolantie",
+        "speedLimit": "30",
+        "sideCode": 1,
+        "id": 40,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            390904.0945750312,
+            6689434.5992012285
+          ],
+          [
+            390904.95885874995,
+            6689434.774378352
+          ],
+          [
+            390913.4821873732,
+            6689436.232842343
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Siipitie",
+        "speedLimit": "50",
+        "sideCode": 1,
+        "id": 41,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            388169.31956408557,
+            6687507.231656321
+          ],
+          [
+            388165.36207703536,
+            6687515.669710151
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Ilolantie",
+        "speedLimit": "30",
+        "sideCode": 1,
+        "id": 42,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            390889.72544224106,
+            6689431.30028469
+          ],
+          [
+            390896.9397686711,
+            6689433.106570886
+          ],
+          [
+            390899.8963102581,
+            6689433.748276999
+          ],
+          [
+            390904.0945750312,
+            6689434.5992012285
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Siipitie",
+        "speedLimit": "50",
+        "sideCode": 1,
+        "id": 43,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            388144.75619715167,
+            6687559.389675019
+          ],
+          [
+            388137.9147505094,
+            6687574.0806830395
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Epinkoskentie",
+        "speedLimit": "40",
+        "sideCode": 1,
+        "id": 44,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            390914.66643123317,
+            6689422.252910893
+          ],
+          [
+            390913.9741635608,
+            6689425.208927144
+          ],
+          [
+            390913.8211197949,
+            6689426.490099963
+          ],
+          [
+            390913.61391848925,
+            6689428.729562441
+          ],
+          [
+            390913.4411782373,
+            6689432.28463456
+          ],
+          [
+            390913.4581525452,
+            6689435.81580051
+          ],
+          [
+            390913.4821873695,
+            6689436.232842343
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Sipulitie",
+        "speedLimit": "30",
+        "sideCode": 1,
+        "id": 45,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            392038.856486117,
+            6687584.176887285
+          ],
+          [
+            392048.8230728002,
+            6687595.089412906
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Epinkoskentie",
+        "speedLimit": "40",
+        "sideCode": 1,
+        "id": 46,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            390939.1830519311,
+            6689332.9382582195
+          ],
+          [
+            390938.2651366655,
+            6689335.989584093
+          ],
+          [
+            390931.9555250975,
+            6689359.340111366
+          ],
+          [
+            390925.7880465636,
+            6689381.802586489
+          ],
+          [
+            390921.5665334927,
+            6689396.997922266
+          ],
+          [
+            390918.50407255586,
+            6689408.182829515
+          ],
+          [
+            390915.39150010457,
+            6689419.156832043
+          ],
+          [
+            390914.66643123317,
+            6689422.252910893
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Tarhurintie",
+        "speedLimit": "40",
+        "sideCode": 1,
+        "id": 47,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            392123.7749602394,
+            6687658.0169870965
+          ],
+          [
+            392133.5898186959,
+            6687649.22552817
+          ],
+          [
+            392145.95357316104,
+            6687638.014681096
+          ],
+          [
+            392158.2632552039,
+            6687626.852864927
+          ],
+          [
+            392167.6388990942,
+            6687618.351491165
+          ],
+          [
+            392176.9870823591,
+            6687609.916133547
+          ],
+          [
+            392183.01913227164,
+            6687604.310948047
+          ],
+          [
+            392185.88086583914,
+            6687601.212872989
+          ],
+          [
+            392189.19446556916,
+            6687597.309149908
+          ],
+          [
+            392190.2720848046,
+            6687595.821922347
+          ],
+          [
+            392191.23821832263,
+            6687594.025602885
+          ],
+          [
+            392192.24592096906,
+            6687591.25263191
+          ],
+          [
+            392193.6244928513,
+            6687587.522045535
+          ],
+          [
+            392194.3682378479,
+            6687585.244849719
+          ],
+          [
+            392195.4162624913,
+            6687581.577880253
+          ],
+          [
+            392196.3684549205,
+            6687577.518854786
+          ],
+          [
+            392197.06304303044,
+            6687573.752337151
+          ],
+          [
+            392197.5156585291,
+            6687570.536921524
+          ],
+          [
+            392197.8258659086,
+            6687567.507539072
+          ],
+          [
+            392198.05071084114,
+            6687563.881011997
+          ],
+          [
+            392198.11724012665,
+            6687561.201124042
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Tarhurintie",
+        "speedLimit": "40",
+        "sideCode": 1,
+        "id": 48,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            392114.12035468384,
+            6687666.584110544
+          ],
+          [
+            392119.43913676037,
+            6687661.900712529
+          ],
+          [
+            392123.7749602394,
+            6687658.0169870965
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Ylästöntie",
+        "speedLimit": "30",
+        "sideCode": 1,
+        "id": 49,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            388292.48610822327,
+            6684507.696123758
+          ],
+          [
+            388281.17809959804,
+            6684511.842081012
+          ],
+          [
+            388274.16540349665,
+            6684514.006942713
+          ],
+          [
+            388253.2637196586,
+            6684519.952849882
+          ],
+          [
+            388245.57026631205,
+            6684522.295018685
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Sipulitie",
+        "speedLimit": "30",
+        "sideCode": 1,
+        "id": 50,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            392108.48623793223,
+            6687660.41525649
+          ],
+          [
+            392114.12035468384,
+            6687666.584110544
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Hankikuja",
+        "speedLimit": "30",
+        "sideCode": 1,
+        "id": 51,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            390700.8658580127,
+            6689246.704064335
+          ],
+          [
+            390699.21395924204,
+            6689252.5423326045
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Uusiniityntie",
+        "speedLimit": "30",
+        "sideCode": 1,
+        "id": 52,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            391646.6507262495,
+            6687751.711385615
+          ],
+          [
+            391644.8668644527,
+            6687753.96247467
+          ],
+          [
+            391640.75686490163,
+            6687758.908716652
+          ],
+          [
+            391635.55794296286,
+            6687765.495571694
+          ],
+          [
+            391631.1489731347,
+            6687770.74331858
+          ],
+          [
+            391627.46691347717,
+            6687774.781834493
+          ],
+          [
+            391622.251392993,
+            6687779.938365545
+          ],
+          [
+            391618.3627475165,
+            6687783.349381036
+          ],
+          [
+            391614.6104766449,
+            6687786.398272039
+          ],
+          [
+            391609.76789069886,
+            6687790.059398764
+          ],
+          [
+            391607.6461840104,
+            6687791.487705685
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Uusiniityntie",
+        "speedLimit": "30",
+        "sideCode": 1,
+        "id": 53,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            391652.9281915404,
+            6687743.789733251
+          ],
+          [
+            391646.6507262495,
+            6687751.711385615
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Piitie",
+        "speedLimit": "50",
+        "sideCode": 1,
+        "id": 54,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            388891.08674155746,
+            6685594.72617195
+          ],
+          [
+            388882.7998014617,
+            6685595.724633776
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Pyrykuja",
+        "speedLimit": "30",
+        "sideCode": 1,
+        "id": 55,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            390628.1468905242,
+            6689226.413317459
+          ],
+          [
+            390626.47977944656,
+            6689232.249121733
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Sipulitie",
+        "speedLimit": "30",
+        "sideCode": 1,
+        "id": 56,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            391871.15106762573,
+            6687681.303590311
+          ],
+          [
+            391871.96247743035,
+            6687681.147131807
+          ],
+          [
+            391873.7010892632,
+            6687680.604440836
+          ],
+          [
+            391875.0488676379,
+            6687680.029241618
+          ],
+          [
+            391876.19818818226,
+            6687679.418819289
+          ],
+          [
+            391877.26693299756,
+            6687678.738306681
+          ],
+          [
+            391878.4041250675,
+            6687677.874428587
+          ],
+          [
+            391931.7541933995,
+            6687629.418931654
+          ],
+          [
+            391948.5353108704,
+            6687614.181798438
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Sipulitie",
+        "speedLimit": "30",
+        "sideCode": 1,
+        "id": 57,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            391813.05084691773,
+            6687666.321012019
+          ],
+          [
+            391863.5728185029,
+            6687681.033914416
+          ],
+          [
+            391865.18329783814,
+            6687681.39915864
+          ],
+          [
+            391866.82938182104,
+            6687681.600147486
+          ],
+          [
+            391868.38717061863,
+            6687681.635734139
+          ],
+          [
+            391870.16359872784,
+            6687681.493997067
+          ],
+          [
+            391871.15106762573,
+            6687681.303590311
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Ylästöntie",
+        "speedLimit": "30",
+        "sideCode": 1,
+        "id": 58,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            388326.9801048533,
+            6684494.044604934
+          ],
+          [
+            388324.2168309833,
+            6684495.301761432
+          ],
+          [
+            388309.0318814131,
+            6684501.484617438
+          ],
+          [
+            388295.7467289423,
+            6684506.500652985
+          ],
+          [
+            388292.48610822327,
+            6684507.696123758
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Pakkaskuja",
+        "speedLimit": "30",
+        "sideCode": 1,
+        "id": 59,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            390554.84618716454,
+            6689205.693796421
+          ],
+          [
+            390553.1723324289,
+            6689211.669131908
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Muuntotie",
+        "speedLimit": "40",
+        "sideCode": 1,
+        "id": 60,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            387812.83268431143,
+            6684930.8406617865
+          ],
+          [
+            387812.880591711,
+            6684935.533108577
+          ],
+          [
+            387813.491253229,
+            6684938.926519939
+          ],
+          [
+            387814.5437363174,
+            6684942.575186961
+          ],
+          [
+            387816.3269189688,
+            6684947.026144189
+          ],
+          [
+            387818.14355964435,
+            6684950.725233112
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    }
+  ]
+}
