@@ -32,7 +32,12 @@ def lambda_handler(event, context):
                 result = cursor.fetchall()
 
                 if result:
-                    selectedDatasets.append([result[0][0], result[0][1], eval(result[0][2])])
+                    datasetInfo={}
+                    datasetInfo["datasetId"]=result[0][0]
+                    datasetInfo["geojson"]=result[0][1]
+                    datasetInfo["matchedRoadlinks"]=eval(str(result[0][2]))
+
+                    selectedDatasets.append(datasetInfo)
                     print("Dataset with datasetId " + datasetId + " ready to be send!")
                 else:
                     alreadyUploadedDatasets.append(datasetId)
