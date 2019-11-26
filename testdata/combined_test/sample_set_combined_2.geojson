@@ -1,0 +1,897 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Kuminatie",
+        "speedLimit": "30",
+        "sideCode": 1,
+        "id": 6,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            390639.1855724156,
+            6685613.7580173705
+          ],
+          [
+            390627.50552366604,
+            6685614.371039909
+          ],
+          [
+            390613.899732312,
+            6685615.127326722
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Koivuhaankuja",
+        "speedLimit": "30",
+        "sideCode": 1,
+        "id": 7,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            389546.5636950811,
+            6686895.508011611
+          ],
+          [
+            389544.61601609865,
+            6686898.209205908
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Tornimäki",
+        "speedLimit": "30",
+        "sideCode": 1,
+        "id": 8,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            391312.5751657004,
+            6687624.126677186
+          ],
+          [
+            391287.8345189717,
+            6687609.5008915495
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Nietostie",
+        "speedLimit": "30",
+        "sideCode": 1,
+        "id": 9,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            390766.52457363275,
+            6689270.612047968
+          ],
+          [
+            390757.54827328795,
+            6689268.474598744
+          ],
+          [
+            390735.69989453297,
+            6689262.748171093
+          ],
+          [
+            390699.21395924204,
+            6689252.5423326045
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Nietostie",
+        "speedLimit": "30",
+        "sideCode": 1,
+        "id": 10,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            390774.22072147345,
+            6689272.444665435
+          ],
+          [
+            390766.52457363275,
+            6689270.612047968
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Perintötie",
+        "speedLimit": "50",
+        "sideCode": 1,
+        "id": 11,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            387760.31274248444,
+            6686399.116741207
+          ],
+          [
+            387768.74030882644,
+            6686404.972657981
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Pälvitie",
+        "speedLimit": "30",
+        "sideCode": 1,
+        "id": 12,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            390742.5664879971,
+            6689386.902594433
+          ],
+          [
+            390740.6383288368,
+            6689393.829035904
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Teilimäki",
+        "speedLimit": "30",
+        "sideCode": 1,
+        "id": 13,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            388669.2820014738,
+            6686842.79672809
+          ],
+          [
+            388771.7368708965,
+            6686831.682669942
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Unikkotie",
+        "speedLimit": "40",
+        "sideCode": 1,
+        "id": 14,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            391227.3196826989,
+            6685649.524712879
+          ],
+          [
+            391222.5308557276,
+            6685650.279390241
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Perintötie",
+        "speedLimit": "50",
+        "sideCode": 1,
+        "id": 15,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            387692.8854657917,
+            6686045.901238593
+          ],
+          [
+            387696.44101893215,
+            6686075.681901309
+          ],
+          [
+            387700.05823159247,
+            6686106.952125668
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Ilolantie",
+        "speedLimit": "30",
+        "sideCode": 1,
+        "id": 16,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            390748.79846538283,
+            6689395.754715731
+          ],
+          [
+            390756.96280465764,
+            6689397.6813873
+          ],
+          [
+            390787.13055798487,
+            6689405.257045339
+          ],
+          [
+            390822.74785464606,
+            6689414.20117954
+          ],
+          [
+            390826.011816671,
+            6689415.049363848
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Ilolantie",
+        "speedLimit": "30",
+        "sideCode": 1,
+        "id": 17,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            390740.6383288368,
+            6689393.829035904
+          ],
+          [
+            390748.79846538283,
+            6689395.754715731
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Liikelentotie",
+        "speedLimit": "50",
+        "sideCode": 1,
+        "id": 18,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            388286.12951565837,
+            6687268.901711955
+          ],
+          [
+            388287.658039162,
+            6687271.507232574
+          ],
+          [
+            388289.6693023286,
+            6687275.094357395
+          ],
+          [
+            388300.0256604455,
+            6687292.92079508
+          ],
+          [
+            388305.95337495126,
+            6687302.947368886
+          ],
+          [
+            388311.1510581464,
+            6687311.940019713
+          ],
+          [
+            388316.2435487387,
+            6687320.542481489
+          ],
+          [
+            388318.62355386285,
+            6687324.026366559
+          ],
+          [
+            388321.65776005224,
+            6687328.243822834
+          ],
+          [
+            388325.96939911327,
+            6687333.388653034
+          ],
+          [
+            388329.01559343404,
+            6687336.2672836045
+          ],
+          [
+            388332.026807147,
+            6687338.8597963555
+          ],
+          [
+            388337.21597176045,
+            6687342.803517449
+          ],
+          [
+            388341.93181949836,
+            6687345.62017015
+          ],
+          [
+            388348.736013892,
+            6687349.40698355
+          ],
+          [
+            388356.06629339786,
+            6687352.620633378
+          ],
+          [
+            388363.7497760065,
+            6687355.339432257
+          ],
+          [
+            388371.2996646389,
+            6687357.091168838
+          ],
+          [
+            388379.4616225772,
+            6687358.027721036
+          ],
+          [
+            388385.4770638923,
+            6687358.201819809
+          ],
+          [
+            388392.22210373677,
+            6687357.924150584
+          ],
+          [
+            388407.72457936197,
+            6687356.899846215
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Liikelentotie",
+        "speedLimit": "50",
+        "sideCode": 1,
+        "id": 19,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            388282.2032834269,
+            6687262.209057708
+          ],
+          [
+            388286.12951565837,
+            6687268.901711955
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Roadlink",
+        "name": "Ilolantie",
+        "speedLimit": "30",
+        "sideCode": 1,
+        "id": 20,
+        "functionalClass": "Katu",
+        "pavementClass": "1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            390731.84363928414,
+            6689391.483329418
+          ],
+          [
+            390739.76843663864,
+            6689393.623753324
+          ],
+          [
+            390740.6383288368,
+            6689393.829035904
+          ]
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.1330277899,
+          60.3395631519
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 6,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.1253056191,
+          60.3361758293
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 7,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.1284182945,
+          60.3354864713
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 8,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.1375336279,
+          60.335926842
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 9,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.1175685757,
+          60.3073768117
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 10,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.111464653,
+          60.3043624442
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 11,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.1115583849,
+          60.302333278
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 12,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.1136689923,
+          60.301463826
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 13,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.1124245546,
+          60.2997137982
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 14,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.1103498645,
+          60.2978823669
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 15,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.1133158405,
+          60.2973140251
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 16,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.115324938,
+          60.2968191303
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 17,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.1119869863,
+          60.2895256551
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 18,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.1087589426,
+          60.2889105765
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 19,
+        "class": 1,
+        "type": "obstacle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.1052817581,
+          60.2863826291
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:3067"
+          }
+        }
+      },
+      "properties": {
+        "id": 20,
+        "class": 1,
+        "type": "obstacle"
+      }
+    }
+  ]
+}
