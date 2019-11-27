@@ -40,11 +40,7 @@ def lambda_handler(event, context):
                         resultInfo["GeoJson"] = result[0]
                     else:
                         resultInfo["Matched roadlinks"] = eval(str(result[0]))
-                        if result[1]:
-                            resultInfo["Matched rate"] = float(result[1])
-                        else:
-                            resultInfo["Matched rate"] = result[1]
-
+                        resultInfo["Matched rate"] = float(result[1])
                         resultInfo["Upload executed"] = result[2]
                         resultInfo["Update finished"] = result[3]
                         try:
