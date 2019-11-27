@@ -597,8 +597,10 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.1354557551,
-          60.3566983574
+          [
+            25.1354557551,
+            60.3566983574
+          ]
         ],
         "crs": {
           "type": "name",
@@ -608,7 +610,7 @@
         }
       },
       "properties": {
-        "id": 1,
+        "id": 1001,
         "class": 1,
         "type": "obstacle"
       }
@@ -618,8 +620,10 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.1276880137,
-          60.3450645215
+          [
+            25.1276880137,
+            60.3450645215
+          ]
         ],
         "crs": {
           "type": "name",
@@ -629,7 +633,7 @@
         }
       },
       "properties": {
-        "id": 2,
+        "id": 1002,
         "class": 1,
         "type": "obstacle"
       }
@@ -639,8 +643,10 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.127435925,
-          60.3432429275
+          [
+            25.127435925,
+            60.3432429275
+          ]
         ],
         "crs": {
           "type": "name",
@@ -650,7 +656,7 @@
         }
       },
       "properties": {
-        "id": 3,
+        "id": 1003,
         "class": 1,
         "type": "obstacle"
       }
@@ -660,8 +666,10 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.1274149106,
-          60.3431526659
+          [
+            25.1274149106,
+            60.3431526659
+          ]
         ],
         "crs": {
           "type": "name",
@@ -671,7 +679,7 @@
         }
       },
       "properties": {
-        "id": 4,
+        "id": 1004,
         "class": 1,
         "type": "obstacle"
       }
@@ -681,8 +689,10 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.1310152839,
-          60.3415081045
+          [
+            25.1310152839,
+            60.3415081045
+          ]
         ],
         "crs": {
           "type": "name",
@@ -692,7 +702,7 @@
         }
       },
       "properties": {
-        "id": 5,
+        "id": 1005,
         "class": 1,
         "type": "obstacle"
       }

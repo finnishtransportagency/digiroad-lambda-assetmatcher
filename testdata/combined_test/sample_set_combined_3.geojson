@@ -1364,8 +1364,10 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.1142625496,
-          60.2876094375
+          [
+            25.1142625496,
+            60.2876094375
+          ]
         ],
         "crs": {
           "type": "name",
@@ -1375,7 +1377,7 @@
         }
       },
       "properties": {
-        "id": 21,
+        "id": 1021,
         "class": 1,
         "type": "obstacle"
       }
@@ -1385,8 +1387,10 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.1133974021,
-          60.3491318422
+          [
+            25.1133974021,
+            60.3491318422
+          ]
         ],
         "crs": {
           "type": "name",
@@ -1396,7 +1400,7 @@
         }
       },
       "properties": {
-        "id": 22,
+        "id": 1022,
         "class": 1,
         "type": "obstacle"
       }
@@ -1406,8 +1410,10 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.1065320015,
-          60.3490212989
+          [
+            25.1065320015,
+            60.3490212989
+          ]
         ],
         "crs": {
           "type": "name",
@@ -1417,7 +1423,7 @@
         }
       },
       "properties": {
-        "id": 23,
+        "id": 1023,
         "class": 1,
         "type": "obstacle"
       }
@@ -1427,8 +1433,10 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.117219088,
-          60.3468574553
+          [
+            25.117219088,
+            60.3468574553
+          ]
         ],
         "crs": {
           "type": "name",
@@ -1438,7 +1446,7 @@
         }
       },
       "properties": {
-        "id": 24,
+        "id": 1024,
         "class": 1,
         "type": "obstacle"
       }
@@ -1448,8 +1456,10 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.1148692473,
-          60.3392614474
+          [
+            25.1148692473,
+            60.3392614474
+          ]
         ],
         "crs": {
           "type": "name",
@@ -1459,7 +1469,7 @@
         }
       },
       "properties": {
-        "id": 25,
+        "id": 1025,
         "class": 1,
         "type": "obstacle"
       }
@@ -1469,8 +1479,10 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.1250038602,
-          60.2888029692
+          [
+            25.1250038602,
+            60.2888029692
+          ]
         ],
         "crs": {
           "type": "name",
@@ -1480,7 +1492,7 @@
         }
       },
       "properties": {
-        "id": 26,
+        "id": 1026,
         "class": 1,
         "type": "obstacle"
       }
@@ -1490,8 +1502,10 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.1175141134,
-          60.2854147822
+          [
+            25.1175141134,
+            60.2854147822
+          ]
         ],
         "crs": {
           "type": "name",
@@ -1501,7 +1515,7 @@
         }
       },
       "properties": {
-        "id": 27,
+        "id": 1027,
         "class": 1,
         "type": "obstacle"
       }
@@ -1511,8 +1525,10 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.1272361048,
-          60.284193026
+          [
+            25.1272361048,
+            60.284193026
+          ]
         ],
         "crs": {
           "type": "name",
@@ -1522,7 +1538,7 @@
         }
       },
       "properties": {
-        "id": 28,
+        "id": 1028,
         "class": 1,
         "type": "obstacle"
       }
@@ -1532,8 +1548,10 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.0937807446,
-          60.2843343507
+          [
+            25.0937807446,
+            60.2843343507
+          ]
         ],
         "crs": {
           "type": "name",
@@ -1543,7 +1561,7 @@
         }
       },
       "properties": {
-        "id": 29,
+        "id": 1029,
         "class": 1,
         "type": "obstacle"
       }
@@ -1553,8 +1571,10 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.1382978643,
-          60.2652255952
+          [
+            25.1382978643,
+            60.2652255952
+          ]
         ],
         "crs": {
           "type": "name",
@@ -1564,7 +1584,7 @@
         }
       },
       "properties": {
-        "id": 30,
+        "id": 1030,
         "class": 1,
         "type": "obstacle"
       }
@@ -1574,8 +1594,10 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.0943395072,
-          60.2718121567
+          [
+            25.0943395072,
+            60.2718121567
+          ]
         ],
         "crs": {
           "type": "name",
@@ -1585,7 +1607,7 @@
         }
       },
       "properties": {
-        "id": 31,
+        "id": 1031,
         "class": 1,
         "type": "obstacle"
       }
@@ -1595,8 +1617,10 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.0912584018,
-          60.2685656024
+          [
+            25.0912584018,
+            60.2685656024
+          ]
         ],
         "crs": {
           "type": "name",
@@ -1606,7 +1630,7 @@
         }
       },
       "properties": {
-        "id": 32,
+        "id": 1032,
         "class": 1,
         "type": "obstacle"
       }
@@ -1616,8 +1640,10 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.0958412744,
-          60.2676271361
+          [
+            25.0958412744,
+            60.2676271361
+          ]
         ],
         "crs": {
           "type": "name",
@@ -1627,7 +1653,7 @@
         }
       },
       "properties": {
-        "id": 33,
+        "id": 1033,
         "class": 1,
         "type": "obstacle"
       }
@@ -1637,8 +1663,10 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.0971945342,
-          60.2673171439
+          [
+            25.0971945342,
+            60.2673171439
+          ]
         ],
         "crs": {
           "type": "name",
@@ -1648,7 +1676,7 @@
         }
       },
       "properties": {
-        "id": 34,
+        "id": 1034,
         "class": 1,
         "type": "obstacle"
       }
@@ -1658,8 +1686,10 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.0947886979,
-          60.2634179394
+          [
+            25.0947886979,
+            60.2634179394
+          ]
         ],
         "crs": {
           "type": "name",
@@ -1669,7 +1699,7 @@
         }
       },
       "properties": {
-        "id": 35,
+        "id": 1035,
         "class": 1,
         "type": "obstacle"
       }
@@ -1679,8 +1709,10 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.1016189182,
-          60.262416117
+          [
+            25.1016189182,
+            60.262416117
+          ]
         ],
         "crs": {
           "type": "name",
@@ -1690,7 +1722,7 @@
         }
       },
       "properties": {
-        "id": 36,
+        "id": 1036,
         "class": 1,
         "type": "obstacle"
       }
@@ -1700,8 +1732,10 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.1073511072,
-          60.2606942625
+          [
+            25.1073511072,
+            60.2606942625
+          ]
         ],
         "crs": {
           "type": "name",
@@ -1711,7 +1745,7 @@
         }
       },
       "properties": {
-        "id": 37,
+        "id": 1037,
         "class": 1,
         "type": "obstacle"
       }
@@ -1721,8 +1755,10 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.1049429616,
-          60.2472712164
+          [
+            25.1049429616,
+            60.2472712164
+          ]
         ],
         "crs": {
           "type": "name",
@@ -1732,7 +1768,7 @@
         }
       },
       "properties": {
-        "id": 38,
+        "id": 1038,
         "class": 1,
         "type": "obstacle"
       }
@@ -1742,8 +1778,10 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.1092385148,
-          60.2444852695
+          [
+            25.1092385148,
+            60.2444852695
+          ]
         ],
         "crs": {
           "type": "name",
@@ -1753,7 +1791,7 @@
         }
       },
       "properties": {
-        "id": 39,
+        "id": 1039,
         "class": 1,
         "type": "obstacle"
       }
@@ -1763,8 +1801,10 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.0849172708,
-          60.249130061
+          [
+            25.0849172708,
+            60.249130061
+          ]
         ],
         "crs": {
           "type": "name",
@@ -1774,7 +1814,7 @@
         }
       },
       "properties": {
-        "id": 40,
+        "id": 1040,
         "class": 1,
         "type": "obstacle"
       }
@@ -1784,8 +1824,10 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.0891846967,
-          60.2464145076
+          [
+            25.0891846967,
+            60.2464145076
+          ]
         ],
         "crs": {
           "type": "name",
@@ -1795,7 +1837,7 @@
         }
       },
       "properties": {
-        "id": 41,
+        "id": 1041,
         "class": 1,
         "type": "obstacle"
       }
@@ -1805,8 +1847,10 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.0726390269,
-          60.3689950873
+          [
+            25.0726390269,
+            60.3689950873
+          ]
         ],
         "crs": {
           "type": "name",
@@ -1816,7 +1860,7 @@
         }
       },
       "properties": {
-        "id": 42,
+        "id": 1042,
         "class": 1,
         "type": "obstacle"
       }
@@ -1826,8 +1870,10 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.073276773,
-          60.3677532359
+          [
+            25.073276773,
+            60.3677532359
+          ]
         ],
         "crs": {
           "type": "name",
@@ -1837,7 +1883,7 @@
         }
       },
       "properties": {
-        "id": 43,
+        "id": 1043,
         "class": 1,
         "type": "obstacle"
       }
@@ -1847,8 +1893,10 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.0705495317,
-          60.3679639139
+          [
+            25.0705495317,
+            60.3679639139
+          ]
         ],
         "crs": {
           "type": "name",
@@ -1858,7 +1906,7 @@
         }
       },
       "properties": {
-        "id": 44,
+        "id": 1044,
         "class": 1,
         "type": "obstacle"
       }
@@ -1868,8 +1916,10 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.0679124561,
-          60.3664120466
+          [
+            25.0679124561,
+            60.3664120466
+          ]
         ],
         "crs": {
           "type": "name",
@@ -1879,7 +1929,7 @@
         }
       },
       "properties": {
-        "id": 45,
+        "id": 1045,
         "class": 1,
         "type": "obstacle"
       }
@@ -1889,8 +1939,10 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.0865205965,
-          60.3657107794
+          [
+            25.0865205965,
+            60.3657107794
+          ]
         ],
         "crs": {
           "type": "name",
@@ -1900,7 +1952,7 @@
         }
       },
       "properties": {
-        "id": 46,
+        "id": 1046,
         "class": 1,
         "type": "obstacle"
       }
@@ -1910,8 +1962,10 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.0877972915,
-          60.3641293538
+          [
+            25.0877972915,
+            60.3641293538
+          ]
         ],
         "crs": {
           "type": "name",
@@ -1921,7 +1975,7 @@
         }
       },
       "properties": {
-        "id": 47,
+        "id": 1047,
         "class": 1,
         "type": "obstacle"
       }
@@ -1931,8 +1985,10 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.0900894174,
-          60.360451179
+          [
+            25.0900894174,
+            60.360451179
+          ]
         ],
         "crs": {
           "type": "name",
@@ -1942,7 +1998,7 @@
         }
       },
       "properties": {
-        "id": 48,
+        "id": 1048,
         "class": 1,
         "type": "obstacle"
       }
@@ -1952,8 +2008,10 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.0973537534,
-          60.3593399207
+          [
+            25.0973537534,
+            60.3593399207
+          ]
         ],
         "crs": {
           "type": "name",
@@ -1963,7 +2021,7 @@
         }
       },
       "properties": {
-        "id": 49,
+        "id": 1049,
         "class": 1,
         "type": "obstacle"
       }
@@ -1973,8 +2031,10 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.0890966301,
-          60.3547051173
+          [
+            25.0890966301,
+            60.3547051173
+          ]
         ],
         "crs": {
           "type": "name",
@@ -1984,7 +2044,7 @@
         }
       },
       "properties": {
-        "id": 50,
+        "id": 1050,
         "class": 1,
         "type": "obstacle"
       }
