@@ -58,7 +58,7 @@ def lambda_handler(event, context):
     try:
         userMessage = {}
         if selectedDatasets:
-            othMessage = send_datasets_to_oth(json.dumps(selectedDatasets), cursor)
+            othMessage = send_datasets_to_oth(selectedDatasets, cursor)
             print('AWS-OTH communication finished')
 
             for datasetId in othMessage:
@@ -95,8 +95,7 @@ def send_datasets_to_oth(selectedDatasets, dataBaseCursor):
     base_url = os.environ['OTH_MUNICIPALITY_API_URL']
     othHeaders = {'Authorization': os.environ['OTH_MUNICIPALITY_API_AUTH'], 'Content-Type': 'application/json'}
     print('Sending datasets to OTH')
-
-    response = requests.put(base_url, json=selectedDatasets, headers=othHeaders)
+    response = requests.put(base_url, json=json.dumps(selectedDatasets), headers=othHeaders)
     print('Response fetched')
     if response.status_code == 200:
         return store_oth_response(response, dataBaseCursor)
