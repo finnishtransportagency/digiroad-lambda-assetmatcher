@@ -30,12 +30,11 @@ DECLARE
 BEGIN
 
   -- Inits the column as an empty column
+  -- This is used in development
   UPDATE datasets
-  SET matched_roadlinks = NULL
-  WHERE dataset_id = dataset_uuid;
-
-  UPDATE datasets
-  SET matching_rate_feature = NULL
+  SET 
+    matched_roadlinks = NULL, 
+    matching_rate_feature = NULL
   WHERE dataset_id = dataset_uuid;
 
   -- Script prosesses one map featureat at a time.
@@ -265,19 +264,23 @@ BEGIN
       DROP INDEX temp_points_spix;
   END LOOP;
 
-  -- Outerbrackets for 2D-array
+  
+  -- 8.3 Get averages of the matched roadlinks and Add Outerbrackets
   UPDATE datasets
-  SET matched_roadlinks = CONCAT('[',matched_roadlinks,']')
-  WHERE dataset_id = dataset_uuid;
-
-  -- 8.3 Get averages of the matched roadlinks
-  UPDATE datasets
-  SET matching_rate = (
-  	SELECT AVG((SELECT AVG(match_value) FROM UNNEST(matching_rate_feature) AS match_value))
-  	FROM datasets
-    WHERE dataset_id = dataset_uuid
+  SET 
+    matched_roadlinks = CONCAT('[',matched_roadlinks,']'), -- Outerbrackets for 2D-array
+    matching_rate = (
+  	  SELECT AVG(
+        (
+        SELECT AVG(match_value) 
+        FROM UNNEST(matching_rate_feature) AS match_value
+        )
+      )
+  	  FROM datasets
+      WHERE dataset_id = dataset_uuid
   )
   WHERE dataset_id = dataset_uuid;
+
 
 END;
 $BODY$
