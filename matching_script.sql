@@ -26,6 +26,9 @@ DECLARE
 	point_coordinates jsonb;
 	point_temp_store geometry;
 
+  index_of_fetures int = 0;
+  length_of_features int = jsonb_array_length(geojson_data);
+
 
 BEGIN
 
@@ -40,6 +43,15 @@ BEGIN
   -- Script prosesses one map featureat at a time.
   FOR feature IN SELECT * FROM jsonb_array_elements(geojson_data)
     LOOP
+
+    -- Console logging
+    index_of_fetures = index_of_fetures + 1;
+    RAISE NOTICE '% of %, name: %, functionalClass: %', 
+      index_of_fetures, 
+      length_of_features, 
+      feature->'properties'->'name',
+      feature->'properties'->'functionalClass';
+
 
     -- for every feature temp_points tabel is emptied and serial reset.
     -- below script is designed to use serial id.
@@ -107,6 +119,8 @@ BEGIN
       	WHERE dataset_id = dataset_uuid;
 
         DROP INDEX temp_points_spix;
+       
+        
 
 	    END IF;
 
@@ -125,7 +139,7 @@ BEGIN
         ORDER BY temp_points.geom <-> lnk_vrx.the_geom ASC
         LIMIT 1
       );
-
+ 
       -- 5. Slecting the the A and B for routing
       -- this prosess depends on tables id column which has to be serial
 
@@ -219,49 +233,55 @@ BEGIN
       )
       WHERE dataset_id = dataset_uuid;
 
-
-      -- 8.2 Calculate matching rate for lines
-      WITH dr_line AS (
-      	SELECT
-      	st_transform(
-      		ST_BUFFER(
-      			ST_Collect(geom),
-      		2.5),
-      	4326) AS geom
-      	FROM dr_linkki
-      	WHERE link_id =
-        		ANY(
-      		    ARRAY(
-           		  SELECT string_to_array(edges, ',')::int[]
-      	 		    FROM temp_points
-      	 		    LIMIT 1
-      		    )
+     
+      IF (SELECT edges IS NOT NULL FROM temp_points LIMIT 1)
+        THEN
+        
+          -- 8.2 Calculate matching rate for lines
+          WITH dr_line AS (
+          	SELECT
+          	st_transform(
+          		ST_BUFFER(
+          			ST_Collect(geom),
+          		2.5),
+          	4326) AS geom
+          	FROM dr_linkki
+          	WHERE link_id =
+            		ANY(
+          		    ARRAY(
+               		  SELECT string_to_array(edges, ',')::int[]
+          	 		    FROM temp_points
+          	 		    LIMIT 1
+          		    )
+                )
+          ),
+          temp_line AS (
+          	SELECT ST_TRANSFORM(
+          			ST_BUFFER(
+          			 ST_MAKELINE(geom),
+          			0.5),
+          		   4326) AS geom
+          	FROM temp_points
+          )
+    
+          UPDATE datasets
+          SET matching_rate_feature =
+            array_append(
+          	  matching_rate_feature,
+              (
+          	    SELECT (ST_AREA(ST_INTERSECTION(temp_line.geom, dr_line.geom))/st_area(temp_line.geom))
+          	    FROM temp_line, dr_line
+          	  )
             )
-      ),
-      temp_line AS (
-      	SELECT ST_TRANSFORM(
-      			ST_BUFFER(
-      			 ST_MAKELINE(geom),
-      			0.5),
-      		   4326) AS geom
-      	FROM temp_points
-      )
+          WHERE dataset_id = dataset_uuid;
+ 
 
-      UPDATE datasets
-      SET matching_rate_feature =
-        array_append(
-      	  matching_rate_feature,
-          (
-      	    SELECT (ST_AREA(ST_INTERSECTION(temp_line.geom, dr_line.geom))/st_area(temp_line.geom))
-      	    FROM temp_line, dr_line
-      	  )
-        )
-      WHERE dataset_id = dataset_uuid;
-
-
-      -- TRUNCATE datasets;
+      END IF;
+    
+          -- TRUNCATE datasets;
 
       DROP INDEX temp_points_spix;
+
   END LOOP;
 
   
