@@ -2,19 +2,29 @@ import json
 import psycopg2
 import uuid
 import os
+import jsonSchemaValidator
+
 
 def lambda_handler(event, context):
     try:
-        connection = psycopg2.connect(user = os.environ['RDS_USER'],
-                                      password = os.environ['RDS_PASSWORD'],
-                                      host = os.environ['RDS_HOST'],
-                                      port = os.environ['RDS_PORT'],
+        connection = psycopg2.connect(user=os.environ['RDS_USER'],
+                                      password=os.environ['RDS_PASSWORD'],
+                                      host=os.environ['RDS_HOST'],
+                                      port=os.environ['RDS_PORT'],
                                       database=os.environ['RDS_DATABASE'],
                                       options=f"-c search_path={os.environ['RDS_SCHEMA']}")
         cursor = connection.cursor()
         print("PostgreSQL connection established")
 
         data = event['body']
+        json_errors = validate_geojson(json.loads(data))
+
+        if json_errors:
+            return {
+                'statusCode': 400,
+                'body': json.dumps(json_errors)
+            }
+
         datasetId = str(uuid.uuid4())
 
         insertDataset = "INSERT INTO datasets(dataset_id, json_data, upload_executed) VALUES(%s, %s, CURRENT_TIMESTAMP);"
@@ -31,7 +41,10 @@ def lambda_handler(event, context):
         print("Error while connecting to PostgreSQL", error)
         return {
             'statusCode': 400,
-            'body': json.dumps("Malformed geojson. Check geojson. In addition to the xy-coordinate pairs, all delivered information must have the name of the road (if available), and information whether it is a road, or used as a cycling or walking path.")
+            'body': json.dumps(
+                "Malformed geojson. Check geojson. In addition to the xy-coordinate pairs, all delivered information "
+                "must have the name of the road (if available), and information whether it is a road, or used as a "
+                "cycling or walking path.")
         }
     finally:
         if connection:
@@ -43,3 +56,18 @@ def lambda_handler(event, context):
         'statusCode': 200,
         'body': json.dumps({"DatasetId": datasetId})
     }
+
+
+def validate_geojson(json):
+    errors = jsonSchemaValidator.validate_json(json)
+    json_response_errors = {}
+
+    if errors:
+        for feature_number, error_message in errors:
+            if feature_number == 0:
+                json_response_errors["Error"] = error_message
+            else:
+                json_response_errors["Feature " + str(feature_number)] = error_message
+
+        print(json_response_errors)
+        return json_response_errors
