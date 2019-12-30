@@ -46,7 +46,7 @@ BEGIN
 
     -- Console logging
     index_of_fetures = index_of_fetures + 1;
-    RAISE NOTICE '% of %, name: %, functionalClass: %', 
+    RAISE NOTICE '%% of %%, name: %%, functionalClass: %%',
       index_of_fetures, 
       length_of_features, 
       feature->'properties'->'name',
