@@ -46,13 +46,14 @@ def lambda_handler(event, context):
         connection.commit()
     except (Exception, psycopg2.Error) as error:
         print("Error while connecting to PostgreSQL", error)
-        return {
-            'statusCode': 400,
-            'body': json.dumps(
-                "Malformed geojson. Check geojson. In addition to the xy-coordinate pairs, all delivered information "
-                "must have the name of the road (if available), and information whether it is a road, or used as a "
-                "cycling or walking path.")
-        }
+        # Now that the validation is done what message should we put here if the connection/matching script fails?
+        # return {
+        #     'statusCode': 400,
+        #     'body': json.dumps(
+        #         "Malformed geojson. Check geojson. In addition to the xy-coordinate pairs, all delivered information "
+        #         "must have the name of the road (if available), and information whether it is a road, or used as a "
+        #         "cycling or walking path.")
+        # }
     finally:
         if connection:
             cursor.close()
