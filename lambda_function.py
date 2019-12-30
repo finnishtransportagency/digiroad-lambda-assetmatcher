@@ -1,7 +1,12 @@
+import os
+import sys
+
+root = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, root + "/packages")
+
 import json
 import psycopg2
 import uuid
-import os
 import jsonSchemaValidator
 
 
