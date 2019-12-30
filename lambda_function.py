@@ -26,6 +26,7 @@ def lambda_handler(event, context):
             }
 
         datasetId = str(uuid.uuid4())
+        print("DatasetId: " + datasetId)
 
         insertDataset = "INSERT INTO datasets(dataset_id, json_data, upload_executed) VALUES(%s, %s, CURRENT_TIMESTAMP);"
         insertVariables = (datasetId, data)
