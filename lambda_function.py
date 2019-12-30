@@ -1,6 +1,7 @@
 import os
 import sys
 
+# Way found to put all packages on a folder and import them. We should try to put this in a __init__.py file somehow
 root = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, root + "/packages")
 
