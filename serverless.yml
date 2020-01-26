@@ -1,0 +1,98 @@
+# NOTE: update this with your service name
+service: digiroad-lambda-assetmatcher
+
+# Create an optimized package for functions
+package:
+  individually: true
+
+plugins:
+  - serverless-bundle # Package functions with Webpack
+  - serverless-offline
+  - serverless-dotenv-plugin # Load .env as environment variables
+
+custom:
+  # Stage is based on what is passed in when running serverless
+  # commands. Or fallsback to what we have set in the provider section.
+  stage: ${opt:stage, self:provider.stage}
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  stage: dev
+  region: eu-west-1
+  # To load environment variables externally
+  # rename env.example to .env and uncomment
+  # the following line. Also, make sure to not
+  # commit your .env.
+  #
+  environment:
+    PGDATABASE: ${env:RDS_DATABASE}
+    PGHOST: ${env:RDS_HOST}
+    PGPORT: ${env:RDS_PORT,'5432'}
+    PGUSER: ${env:RDS_USER}
+    PGPASSWORD: ${env:RDS_PASSWORD}
+
+functions:
+  convert: # original
+    handler: lambdas/create.main
+    events:
+      - http:
+          path: convert
+          cors: true
+          method: post
+
+  queryDataset: # original
+    handler: lambdas/querydataset.main
+    events:
+      - http:
+          path: queryDataset
+          cors: true
+          method: get
+
+  update: # original
+    handler: lambdas/upload.js
+    events:
+
+  create:
+    handler: lambdas/create.main
+    events:
+      - http:
+          path: dataset
+          cors: true
+          method: post
+
+  get:
+    handler: lambdas/get.main
+    events:
+      - http:
+          path: dataset/{id}
+          cors: true
+          method: get
+
+  list:
+    handler: lambdas/list.main
+    events:
+      - http:
+          path: dataset
+          cors: true
+          method: get
+
+  put:
+    handler: lambdas/upload.main
+    events:
+      - http:
+          path: dataset/{id}/upload
+          cors: true
+          method: put
+
+  delete:
+    handler: lambdas/delete.main
+    events:
+      - http:
+          path: dataset/{id}
+          cors: true
+          method: delete
+
+resources:
+  # API Gateway Errors
+  - ${file(resources/api-gateway-errors.yml)}

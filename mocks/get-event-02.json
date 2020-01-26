@@ -1,0 +1,8 @@
+{
+  "pathParameters": {
+    "id": "5f95845a-d141-4a61-9edc-99368f6e1ca0"
+  },
+  "queryStringParameters": {
+    "geojson": "yes"
+  }
+}
