@@ -32,6 +32,16 @@ provider:
     PGUSER: ${env:RDS_USER}
     PGPASSWORD: ${env:RDS_PASSWORD}
 
+  # IAM role to provide lambdas' RDS-access
+  role: ${env:RDS_ACCESS_ROLE}
+  vpc:
+    securityGroupIds:
+      - ${env:VPC_GROUP_ID}
+    subnetIds:
+      - ${env:VPC_SUBNET_1}
+      - ${env:VPC_SUBNET_2}
+      - ${env:VPC_SUBNET_3}
+
 functions:
   convert: # original
     handler: lambdas/create.main
