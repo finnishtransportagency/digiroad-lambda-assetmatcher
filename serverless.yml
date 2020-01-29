@@ -31,6 +31,10 @@ provider:
     PGPORT: ${env:RDS_PORT,'5432'}
     PGUSER: ${env:RDS_USER}
     PGPASSWORD: ${env:RDS_PASSWORD}
+    # Environment variables for Authorization
+    USER_POOL_ID: ${env:USER_POOL_ID}
+    USER_POOL_CLIENT_ID: ${env:USER_POOL_CLIENT_ID}
+    USER_POOL_REGION: ${env:USER_POOL_REGION}
 
   # IAM role to provide lambdas' RDS-access
   role: ${env:RDS_ACCESS_ROLE}
@@ -43,6 +47,33 @@ provider:
       - ${env:VPC_SUBNET_3}
 
 functions:
+  login:
+    handler: lambdas/login.main
+    events:
+      - http:
+          path: login
+          method: post
+          cors: true
+
+  changepassword:
+    handler: lambdas/changePassword.main
+    events:
+      - http:
+          path: changepassword
+          method: post
+          cors: true
+
+  forgotpassword:
+    handler: lambdas/forgotPassword.main
+    events:
+      - http:
+          path: forgotpassword
+          method: post
+          cors: true
+
+  auth:
+    handler: lambdas/auth.main
+
   convert: # original
     handler: lambdas/create.main
     events:
@@ -50,6 +81,7 @@ functions:
           path: convert
           cors: true
           method: post
+          authorizer: auth
 
   queryDataset: # original
     handler: lambdas/querydataset.main
@@ -70,6 +102,7 @@ functions:
           path: dataset
           cors: true
           method: post
+          authorizer: auth
 
   get:
     handler: lambdas/get.main
@@ -78,6 +111,7 @@ functions:
           path: dataset/{id}
           cors: true
           method: get
+          authorizer: auth
 
   list:
     handler: lambdas/list.main
@@ -86,6 +120,7 @@ functions:
           path: dataset
           cors: true
           method: get
+          authorizer: auth
 
   put:
     handler: lambdas/upload.main
@@ -94,6 +129,7 @@ functions:
           path: dataset/{id}/upload
           cors: true
           method: put
+          authorizer: auth
 
   delete:
     handler: lambdas/delete.main
@@ -102,6 +138,7 @@ functions:
           path: dataset/{id}
           cors: true
           method: delete
+          authorizer: auth
 
 resources:
   # API Gateway Errors

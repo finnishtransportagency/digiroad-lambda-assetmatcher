@@ -6,7 +6,11 @@ export function failure(body) {
   return buildResponse(500, body);
 }
 
-export function badRequest(body) {
+export function forbidden(body) {
+  return buildResponse(403, body);
+}
+
+export function badrequest(body) {
   return buildResponse(400, body);
 }
 
