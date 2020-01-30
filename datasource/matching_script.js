@@ -12,7 +12,7 @@ export default uuid => {
   if (!validateUUID(uuid)) return { message: 'invalid uuid' };
   return `
 DO
-$BODY$
+$$
 DECLARE
   -- 1. Datafetch
   -- Fetches GeoJSON data and stores it for variable.
@@ -296,6 +296,6 @@ BEGIN
 
 
 END;
-$BODY$
+$$ LANGUAGE 'plpgsql';
 `;
 };

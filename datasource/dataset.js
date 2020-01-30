@@ -11,16 +11,16 @@ update_finished,
 status_log
 `;
 
-export async function uploadGeoJSON(geojson) {
+export async function uploadGeoJSON(userId, geojson) {
   const client = new Client();
   try {
     client.connect();
 
     const result = await client.query(
       `
-    INSERT INTO datasets (json_data, upload_executed)
-    VALUES ($1, CURRENT_TIMESTAMP) RETURNING dataset_id`,
-      [geojson]
+    INSERT INTO datasets (user_id, json_data, upload_executed)
+    VALUES ($1, $2, CURRENT_TIMESTAMP) RETURNING dataset_id`,
+      [userId, geojson]
     );
     return result.rows[0].dataset_id;
   } catch (exception) {
@@ -90,7 +90,7 @@ export async function executeMatchingScript(id) {
     client.connect();
     const query = matching_script(id);
     await client.query(query);
-    return 'Matching script runned successfully';
+    return { message: 'Matching script runned successfully' };
   } catch (exeption) {
     console.log('Error while executing matching script', exeption);
     return 'Error while executing matching script';
