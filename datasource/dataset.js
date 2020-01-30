@@ -84,6 +84,28 @@ export async function fetchTenNewestDatasets() {
   }
 }
 
+export async function fetchUsersDatasets(userId) {
+  const client = new Client();
+  try {
+    client.connect();
+
+    const result = await client.query(
+      `
+      SELECT ${data_columns} 
+      FROM datasets
+      WHERE user_id = $1
+      `,
+      [userId]
+    );
+
+    return result.rows;
+  } catch (exception) {
+    throw new Error('Database connection error');
+  } finally {
+    client.end();
+  }
+}
+
 export async function executeMatchingScript(id) {
   const client = new Client();
   try {
