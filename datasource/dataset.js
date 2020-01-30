@@ -63,7 +63,7 @@ export async function getDatasetById(id, fetchGeoJSON = false) {
   }
 }
 
-export async function fetshTenNewestDatasets() {
+export async function fetchTenNewestDatasets() {
   const client = new Client();
   try {
     client.connect();
