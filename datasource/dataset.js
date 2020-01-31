@@ -108,6 +108,24 @@ export async function fetchUsersDatasets(userId, getAll = false) {
   }
 }
 
+export async function deleteDatasetById(datasetId, userId) {
+  const client = new Client();
+  try {
+    client.connect();
+
+    const result = await client.query(
+      'DELETE FROM datasets WHERE dataset_id = $1 AND user_id = $2 RETURNING dataset_id;',
+      [datasetId, userId]
+    );
+
+    return result.rows;
+  } catch (exception) {
+    throw new Error('Database connection error');
+  } finally {
+    client.end();
+  }
+}
+
 export async function executeMatchingScript(id) {
   const client = new Client();
   try {
