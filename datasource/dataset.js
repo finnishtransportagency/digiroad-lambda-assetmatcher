@@ -63,6 +63,28 @@ export async function getDatasetById(id, fetchGeoJSON = false) {
   }
 }
 
+export async function getUsersDatasetById(datsetId, userId) {
+  const client = new Client();
+  try {
+    client.connect();
+
+    const result = await client.query(
+      `
+      SELECT * 
+      FROM datasets
+      WHERE dataset_id = $1 AND user_id = $2
+      `,
+      [datsetId, userId]
+    );
+
+    return result.rows;
+  } catch (exception) {
+    throw new Error('Database connection error');
+  } finally {
+    client.end();
+  }
+}
+
 export async function fetchTenNewestDatasets() {
   const client = new Client();
   try {
@@ -116,6 +138,27 @@ export async function deleteDatasetById(datasetId, userId) {
     const result = await client.query(
       'DELETE FROM datasets WHERE dataset_id = $1 AND user_id = $2 RETURNING dataset_id;',
       [datasetId, userId]
+    );
+
+    return result.rows;
+  } catch (exception) {
+    throw new Error('Database connection error');
+  } finally {
+    client.end();
+  }
+}
+
+export async function setUpdateExecuted(datasetId) {
+  const client = new Client();
+  try {
+    client.connect();
+
+    const result = await client.query(
+      `UPDATE datasets 
+       SET update_finished = CURRENT_TIMESTAMP 
+       WHERE dataset_id = $1
+       RETURNING dataset_id, update_finished`,
+      [datasetId]
     );
 
     return result.rows;
