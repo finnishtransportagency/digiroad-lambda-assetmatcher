@@ -38,11 +38,32 @@ $ npm install
 
 ### Setting up environment variables
 
+Database connection
+
 ```
 RDS_DATABASE=<required>
 RDS_HOST=<required>
 RDS_USER=<required>
 RDS_PASSWORD=<required>
+```
+
+Cognito User Pool connections
+
+```
+USER_POOL_ID=<required>
+USER_POOL_CLIENT_ID=<required>
+USER_POOL_REGION=<required>
+```
+
+On AWS Cloud the whole operation is running inside VPC.
+These varaiables has to be set before deployment.
+
+```
+RDS_ACCESS_ROLE=<required>(AWS:ARN:HERE)
+VPC_GROUP_ID=<required>
+VPC_SUBNET_1=<required>
+VPC_SUBNET_2=<required>
+VPC_SUBNET_3=<required>
 ```
 
 ## How to initialize database:
