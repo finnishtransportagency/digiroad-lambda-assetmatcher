@@ -84,17 +84,19 @@ export async function fetchTenNewestDatasets() {
   }
 }
 
-export async function fetchUsersDatasets(userId) {
+export async function fetchUsersDatasets(userId, getAll = false) {
   const client = new Client();
   try {
     client.connect();
+
+    const update_finished = !getAll ? `AND update_finished IS NULL` : '';
 
     const result = await client.query(
       `
       SELECT ${data_columns} 
       FROM datasets
       WHERE user_id = $1
-      `,
+      ` + update_finished,
       [userId]
     );
 
