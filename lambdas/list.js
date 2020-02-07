@@ -2,7 +2,7 @@ import { success, failure } from '../libs/response-lib';
 import { fetchUsersDatasets } from '../datasource/dataset';
 
 export async function main(event) {
-  const userId = event.requestContext.authorizer.claims.sub;
+  const userId = event.requestContext.authorizer.principalId;
   let getAll = false;
   if (event.multiValueQueryStringParameters && event.multiValueQueryStringParameters.getAll) {
     getAll = true;

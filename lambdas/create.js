@@ -2,7 +2,7 @@ import { success, failure } from '../libs/response-lib';
 import { uploadGeoJSON, executeMatchingScript } from '../datasource/dataset';
 
 export async function main(event) {
-  const userId = event.requestContext.authorizer.claims.sub;
+  const userId = event.requestContext.authorizer.principalId;
   const data = event.body;
 
   try {

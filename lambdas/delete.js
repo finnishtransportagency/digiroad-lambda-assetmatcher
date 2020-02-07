@@ -3,7 +3,7 @@ import { deleteDatasetById } from '../datasource/dataset';
 
 export async function main(event) {
   const id = event.pathParameters.id;
-  const userId = event.requestContext.authorizer.claims.sub;
+  const userId = event.requestContext.authorizer.principalId;
 
   const deleted = await deleteDatasetById(id, userId);
 

@@ -4,7 +4,7 @@ import { getUsersDatasetById, setUpdateExecuted } from '../datasource/dataset';
 
 export async function main(event) {
   const datasetId = event.pathParameters.id;
-  const userId = event.requestContext.authorizer.claims.sub;
+  const userId = event.requestContext.authorizer.principalId;
   if (!uuidValidate(datasetId)) return badRequest({ message: 'malformed UUID' });
 
   const result = await getUsersDatasetById(datasetId, userId);
