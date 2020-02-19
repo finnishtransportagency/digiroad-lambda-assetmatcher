@@ -60,7 +60,7 @@ These varaiables has to be set before deployment.
 
 ```
 RDS_ACCESS_ROLE=<required>(AWS:ARN:HERE)
-VPC_GROUP_ID=<required>
+SECURITY_GROUP_ID=<required>
 VPC_SUBNET_1=<required>
 VPC_SUBNET_2=<required>
 VPC_SUBNET_3=<required>

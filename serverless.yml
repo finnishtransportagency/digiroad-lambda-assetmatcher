@@ -40,7 +40,7 @@ provider:
   role: ${env:RDS_ACCESS_ROLE}
   vpc:
     securityGroupIds:
-      - ${env:VPC_GROUP_ID}
+      - ${env:SECURITY_GROUP_ID}
     subnetIds:
       - ${env:VPC_SUBNET_1}
       - ${env:VPC_SUBNET_2}
