@@ -44,7 +44,6 @@ provider:
     subnetIds:
       - ${env:VPC_SUBNET_1}
       - ${env:VPC_SUBNET_2}
-      - ${env:VPC_SUBNET_3}
 
 functions:
   login:
