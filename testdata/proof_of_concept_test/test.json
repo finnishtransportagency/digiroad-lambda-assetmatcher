@@ -1,5 +1,6 @@
 {
   "type": "FeatureCollection",
+  "crs": { "type": "name", "properties": { "name": "EPSG:3067" } },
   "features": [
     {
       "type": "Feature",
@@ -11,8 +12,7 @@
           [390149.567429, 6685596.98163, 0],
           [389894.59267, 6685604.67455, 0],
           [389729.677084, 6685607.28968, 0]
-        ],
-        "crs": { "type": "name", "properties": { "name": "EPSG:3067" } }
+        ]
       },
       "properties": {
         "type": "Roadlink",
@@ -28,8 +28,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [[385908.3310736745, 6671468.601604572, 0]],
-        "crs": { "type": "name", "properties": { "name": "EPSG:3067" } }
+        "coordinates": [385908.3310736745, 6671468.601604572, 0]
       },
       "properties": { "type": "obstacle", "id": 46557474, "class": 1 }
     }
