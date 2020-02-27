@@ -3,10 +3,11 @@ import jwkToPem from 'jwk-to-pem';
 import axios from 'axios';
 
 const iss = `https://cognito-idp.${process.env.USER_POOL_REGION}.amazonaws.com/${process.env.USER_POOL_ID}`;
+const { ResourcePath } = process.env;
 
 // Help function to generate an IAM policy
-const generatePolicy = (principalId, effect, resource) => {
-  if (effect && resource) {
+const generatePolicy = (principalId, effect) => {
+  if (effect) {
     return {
       principalId,
       policyDocument: {
@@ -15,7 +16,7 @@ const generatePolicy = (principalId, effect, resource) => {
           {
             Action: 'execute-api:Invoke',
             Effect: effect,
-            Resource: resource
+            Resource: ResourcePath
           }
         ]
       }
@@ -32,12 +33,12 @@ export async function main(event, context, callback) {
       const response = await axios.get(`${iss}/.well-known/jwks.json`);
       const pem = jwkToPem({ ...response.data.keys[0] });
       const decoded = verify(token, pem, { issuer: iss });
-      return generatePolicy(decoded.sub, 'allow', event.methodArn);
+      return generatePolicy(decoded.sub, 'allow');
     } catch (error) {
       console.log(error);
-      return generatePolicy('user', 'deny', event.methodArn);
+      return generatePolicy('user', 'deny');
     }
   } else {
-    return generatePolicy('user', 'deny', event.methodArn);
+    return generatePolicy('user', 'deny');
   }
 }

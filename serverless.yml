@@ -26,6 +26,24 @@ provider:
   # commit your .env.
   #
   environment:
+    # Policy for accessing lambda resources in auth function.
+    ResourcePath:
+      {
+        'Fn::Join':
+          [
+            '',
+            [
+              'arn:aws:execute-api:',
+              '${self:provider.region}:',
+              { 'Ref': 'AWS::AccountId' },
+              ':',
+              { 'Ref': 'ApiGatewayRestApi' },
+              '/${self:provider.stage}/*',
+            ],
+          ],
+      }
+
+    # Database
     PGDATABASE: ${env:RDS_DATABASE}
     PGHOST: ${env:RDS_HOST}
     PGPORT: ${env:RDS_PORT,'5432'}
