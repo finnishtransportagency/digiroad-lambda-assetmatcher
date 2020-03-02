@@ -1,5 +1,5 @@
-import { accepted, notfound } from '../libs/response-lib';
-import { deleteDatasetById } from '../datasource/dataset';
+import { accepted, notfound } from '../../libs/response-lib';
+import { deleteDatasetById } from '../../datasource/dataset';
 
 export async function main(event) {
   const id = event.pathParameters.id;

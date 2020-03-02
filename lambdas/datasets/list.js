@@ -1,5 +1,5 @@
-import { success, failure } from '../libs/response-lib';
-import { fetchUsersDatasets } from '../datasource/dataset';
+import { success, failure } from '../../libs/response-lib';
+import { fetchUsersDatasets } from '../../datasource/dataset';
 
 export async function main(event) {
   const userId = event.requestContext.authorizer.principalId;

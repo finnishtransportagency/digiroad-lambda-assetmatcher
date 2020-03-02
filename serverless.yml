@@ -113,7 +113,7 @@ functions:
     events:
 
   create:
-    handler: lambdas/create.main
+    handler: lambdas/datasets/create.main
     events:
       - http:
           path: dataset
@@ -121,8 +121,8 @@ functions:
           method: post
           authorizer: auth
 
-  get:
-    handler: lambdas/get.main
+  read:
+    handler: lambdas/datasets/read.main
     events:
       - http:
           path: dataset/{id}
@@ -131,7 +131,7 @@ functions:
           authorizer: auth
 
   list:
-    handler: lambdas/list.main
+    handler: lambdas/datasets/list.main
     events:
       - http:
           path: dataset
@@ -139,8 +139,8 @@ functions:
           method: get
           authorizer: auth
 
-  put:
-    handler: lambdas/upload.main
+  update:
+    handler: lambdas/datasets/update.main
     events:
       - http:
           path: dataset/{id}/upload
@@ -149,7 +149,7 @@ functions:
           authorizer: auth
 
   delete:
-    handler: lambdas/delete.main
+    handler: lambdas/datasets/delete.main
     events:
       - http:
           path: dataset/{id}

@@ -139,8 +139,7 @@ export async function deleteDatasetById(datasetId, userId) {
       'DELETE FROM datasets WHERE dataset_id = $1 AND user_id = $2 RETURNING dataset_id;',
       [datasetId, userId]
     );
-
-    return result.rows;
+    return result.rows[0];
   } catch (exception) {
     throw new Error('Database connection error');
   } finally {

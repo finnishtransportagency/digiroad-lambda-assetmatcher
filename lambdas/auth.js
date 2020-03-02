@@ -3,7 +3,7 @@ import jwkToPem from 'jwk-to-pem';
 import axios from 'axios';
 
 const iss = `https://cognito-idp.${process.env.USER_POOL_REGION}.amazonaws.com/${process.env.USER_POOL_ID}`;
-const { ResourcePath } = process.env;
+const { ResourcePath, IS_OFFLINE } = process.env;
 
 // Help function to generate an IAM policy
 const generatePolicy = (principalId, effect) => {
@@ -16,7 +16,7 @@ const generatePolicy = (principalId, effect) => {
           {
             Action: 'execute-api:Invoke',
             Effect: effect,
-            Resource: ResourcePath
+            Resource: IS_OFFLINE ? '*' : ResourcePath
           }
         ]
       }

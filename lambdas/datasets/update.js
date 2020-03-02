@@ -1,6 +1,6 @@
-import { success, badRequest, notfound } from '../libs/response-lib';
-import uuidValidate from '../libs/uuidValidator-lib';
-import { getUsersDatasetById, setUpdateExecuted } from '../datasource/dataset';
+import { success, badRequest, notfound } from '../../libs/response-lib';
+import uuidValidate from '../../libs/uuidValidator-lib';
+import { getUsersDatasetById, setUpdateExecuted } from '../../datasource/dataset';
 
 export async function main(event) {
   const datasetId = event.pathParameters.id;

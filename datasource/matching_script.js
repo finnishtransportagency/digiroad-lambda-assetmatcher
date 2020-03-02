@@ -12,7 +12,7 @@ export default uuid => {
   if (!validateUUID(uuid)) return { message: 'invalid uuid' };
   return `
 DO
-$$
+$BODY$
 DECLARE
   -- 1. Datafetch
   -- Fetches GeoJSON data and stores it for variable.
@@ -53,14 +53,14 @@ BEGIN
     -- 2. line feature is made to points in order to be used in pgRouting.
     FOR point_coordinates IN
     SELECT * FROM jsonb_array_elements(feature->'geometry'->'coordinates')
-
+      
       LOOP
         point_temp_store = ST_SETSRID(
-          ST_MAKEPOINT(
-            cast(point_coordinates->0 as double precision),
-            cast(point_coordinates->1 as double precision)
-          ),
-          3067);
+        ST_MAKEPOINT(
+          (point_coordinates->>0)::float,
+          (point_coordinates->>1)::float
+        ),
+        3067);
 
         INSERT INTO temp_points (geom) VALUES (point_temp_store);
       END LOOP;
@@ -296,6 +296,6 @@ BEGIN
 
 
 END;
-$$ LANGUAGE 'plpgsql';
+$BODY$
 `;
 };

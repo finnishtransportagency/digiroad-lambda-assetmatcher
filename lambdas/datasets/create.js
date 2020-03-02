@@ -1,5 +1,5 @@
-import { success, failure } from '../libs/response-lib';
-import { uploadGeoJSON, executeMatchingScript } from '../datasource/dataset';
+import { success, failure } from '../../libs/response-lib';
+import { uploadGeoJSON, executeMatchingScript } from '../../datasource/dataset';
 
 export async function main(event) {
   const userId = event.requestContext.authorizer.principalId;
