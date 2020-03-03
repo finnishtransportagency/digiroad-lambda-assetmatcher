@@ -68,6 +68,20 @@ VPC_SUBNET_3=<required>
 
 ## How to initialize database:
 
+### Do
+You can also get started developing this project by setting up the database with `docker-compose`. There is a docker-compose file in the root of this project.
+
+```bash
+export POSTGRES_PASSWORD=<password>
+docker-compose up -d
+```
+
+With docker you don't need to create database nor tables manually. Everything is included in the `docker image`.
+
+---
+
+### How to create database manually
+
 Postgres 11, PostGIS and pgRoutign installed, (postgresql, postgis, pgrouting)
 
 ```sql
