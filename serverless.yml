@@ -92,7 +92,7 @@ functions:
     handler: lambdas/auth.main
 
   convert: # original
-    handler: lambdas/create.main
+    handler: lambdas/datasets/create.main
     events:
       - http:
           path: convert
@@ -107,10 +107,6 @@ functions:
           path: queryDataset
           cors: true
           method: get
-
-  update: # original
-    handler: lambdas/upload.js
-    events:
 
   create:
     handler: lambdas/datasets/create.main
