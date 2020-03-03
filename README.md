@@ -68,7 +68,7 @@ VPC_SUBNET_3=<required>
 
 ## How to initialize database:
 
-### Do
+### PostgreSQL database running inside Docker container
 You can also get started developing this project by setting up the database with `docker-compose`. There is a docker-compose file in the root of this project.
 
 ```bash
