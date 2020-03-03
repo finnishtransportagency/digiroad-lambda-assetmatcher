@@ -138,10 +138,11 @@ SELECT pgr_createTopology('public.dr_linkki', 0.5,'geom', 'link_id', 'source', '
 -- and storing matching process and result
 CREATE TABLE public.datasets (
 	dataset_id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
+	user_id uuid NOT NULL,
 	json_data jsonb NOT NULL,
 	matched_roadlinks text,
 	matching_rate decimal(3,2),
-  matching_rate_feature double precision[],
+	matching_rate_feature double precision[],
 	upload_executed timestamptz,
 	update_finished timestamptz,
 	status_log text
