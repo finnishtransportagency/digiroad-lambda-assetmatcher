@@ -38,7 +38,7 @@ provider:
               { 'Ref': 'AWS::AccountId' },
               ':',
               { 'Ref': 'ApiGatewayRestApi' },
-              '/${self:provider.stage}/*',
+              '/${self:custom.stage}/*',
             ],
           ],
       }
