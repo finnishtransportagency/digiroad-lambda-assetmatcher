@@ -53,6 +53,9 @@ provider:
     USER_POOL_ID: ${env:USER_POOL_ID}
     USER_POOL_CLIENT_ID: ${env:USER_POOL_CLIENT_ID}
     USER_POOL_REGION: ${env:USER_POOL_REGION}
+    # OTH Credentials
+    OTH_MUNICIPALITY_API_URL: ${env:OTH_MUNICIPALITY_API_URL}
+    OTH_MUNICIPALITY_API_AUTH: ${env:OTH_MUNICIPALITY_API_AUTH}
 
   # IAM role to provide lambdas' RDS-access
   role: ${env:RDS_ACCESS_ROLE}
