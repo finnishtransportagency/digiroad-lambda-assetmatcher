@@ -119,6 +119,7 @@ functions:
           cors: true
           method: post
           authorizer: auth
+          async: true
 
   read:
     handler: lambdas/datasets/read.main
