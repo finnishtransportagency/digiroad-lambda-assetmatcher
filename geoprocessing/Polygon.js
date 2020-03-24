@@ -10,6 +10,7 @@ export async function matchPolygonWithDigiroad(Feature, pool) {
   return pool
     .query(query)
     .then(res => {
+      // if GeoJSON has road names, match can be improved by matching with names
       if (Feature.properties.name) {
         const rows = res.rows.filter(row => row.name === Feature.properties.name);
         return rows.map(row => row.link_id);

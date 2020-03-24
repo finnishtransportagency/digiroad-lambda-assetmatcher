@@ -147,6 +147,37 @@ export async function deleteDatasetById(datasetId, userId) {
   }
 }
 
+export async function updateProsessedGeoJSON(GeoJSON, datasetId) {
+  const client = new Client();
+  try {
+    client.connect();
+    const { matchingRate, features } = GeoJSON;
+
+    // This is a bit odd datastructure but that's how this has been aggreed to done for OTH.
+    // This is propably negotiable
+    const matchedRoadlinks = features.map(Feature => `[${Feature.properties.link_ids.join(',')}]`);
+    const matchedRoaLinksString = `[${matchedRoadlinks.join(',')}]`;
+
+    await client.query(
+      `
+      UPDATE datasets 
+        SET 
+          json_data = $1,
+          matching_rate = $2,
+          matched_roadlinks = $3::text,
+          status_log = 'Dataset matched but not yet uploaded to Digiroad.'
+      WHERE dataset_id = $4
+      `,
+      [GeoJSON, matchingRate, matchedRoaLinksString, datasetId]
+    );
+  } catch (exception) {
+    console.log(exception);
+    throw new Error('Database connection error');
+  } finally {
+    client.end();
+  }
+}
+
 export async function setUpdateExecuted(datasetId) {
   const client = new Client();
   try {

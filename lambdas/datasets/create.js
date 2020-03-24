@@ -1,5 +1,5 @@
 import { success, failure } from '../../libs/response-lib';
-import { uploadGeoJSON } from '../../datasource/dataset';
+import { uploadGeoJSON, updateProsessedGeoJSON } from '../../datasource/dataset';
 import { geoprocessGeoJSON } from '../../geoprocessing';
 
 export async function main(event) {
@@ -11,7 +11,9 @@ export async function main(event) {
     // const result = await executeMatchingScript(dataset_id);
     const GeoJSON = JSON.parse(data);
     geoprocessGeoJSON(GeoJSON)
-      .then(() => console.log('Matching done'))
+      .then(async processdGeoJSON => {
+        await updateProsessedGeoJSON(processdGeoJSON, dataset_id);
+      })
       .catch(err => console.error(err.stack));
     return success({ message: 'Matching started...', dataset_id });
   } catch (exeption) {
