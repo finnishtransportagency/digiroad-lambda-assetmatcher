@@ -118,6 +118,7 @@ functions:
           cors: true
           method: post
           authorizer: auth
+          async: true
           documentation:
             summary: 'Post a GeoJSON'
             description: 'Post a GeoJSON'
