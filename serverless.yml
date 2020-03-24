@@ -9,11 +9,27 @@ plugins:
   - serverless-bundle # Package functions with Webpack
   - serverless-offline
   - serverless-dotenv-plugin # Load .env as environment variables
+  - serverless-reqvalidator-plugin
+  - serverless-aws-documentation # Required by requestvalidator
 
 custom:
   # Stage is based on what is passed in when running serverless
   # commands. Or fallsback to what we have set in the provider section.
   stage: ${opt:stage, self:provider.stage}
+  # documentation block is part of request validator
+  documentation:
+    api:
+      info:
+        version: '1.0.0'
+        title: Aritcle API
+        description: This is article API
+      tags:
+        - name: GeoJSON
+          description: GeoJSON Schema
+    models:
+      - name: GeoJSON
+        contentType: 'application/json'
+        schema: ${file(model/FeatureCollection.json)}
 
 provider:
   name: aws
@@ -102,6 +118,11 @@ functions:
           cors: true
           method: post
           authorizer: auth
+          documentation:
+            summary: 'Post a GeoJSON'
+            description: 'Post a GeoJSON'
+            requestModels:
+              'application/json': 'GeoJSON'
 
   queryDataset: # original
     handler: lambdas/querydataset.main
@@ -120,6 +141,11 @@ functions:
           method: post
           authorizer: auth
           async: true
+          documentation:
+            summary: 'Post a GeoJSON'
+            description: 'Post a GeoJSON'
+            requestModels:
+              'application/json': 'GeoJSON'
 
   read:
     handler: lambdas/datasets/read.main
@@ -158,5 +184,5 @@ functions:
           authorizer: auth
 
 resources:
-  # API Gateway Errors
   - ${file(resources/api-gateway-errors.yml)}
+  - ${file(resources/request-validator.yml)}

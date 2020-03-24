@@ -2,16 +2,11 @@
   "name": "digiroad-lambda-assetmatcher",
   "version": "1.1.0",
   "description": "A Node.js starter for the Serverless Framework with async/await and unit test support",
-  "main": "handler.js",
   "scripts": {
     "test": "serverless-bundle test"
   },
   "author": "",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/AnomalyInnovations/serverless-nodejs-starter.git"
-  },
   "devDependencies": {
     "aws-sdk": "^2.598.0",
     "jest": "^24.9.0",
@@ -26,6 +21,8 @@
     "jwk-to-pem": "^2.0.3",
     "node-fetch": "^2.6.0",
     "pg": "^7.17.0",
-    "pg-native": "^3.0.0"
+    "pg-native": "^3.0.0",
+    "serverless-aws-documentation": "^1.1.0",
+    "serverless-reqvalidator-plugin": "^1.0.3"
   }
 }

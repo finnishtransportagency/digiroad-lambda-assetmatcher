@@ -1,0 +1,15 @@
+Resources:
+  # APIG
+  ApiGatewayRestApi:
+    Type: AWS::ApiGateway::RestApi
+    Properties:
+      Name: article-api
+  # APIG Request Validation
+  onlyBody:
+    Type: 'AWS::ApiGateway::RequestValidator'
+    Properties:
+      Name: 'only-body'
+      RestApiId:
+        Ref: ApiGatewayRestApi
+      ValidateRequestBody: true
+      ValidateRequestParameters: false
